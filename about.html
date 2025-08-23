@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BISCOX - Business Consulting</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+
+  <style>
+    /* Full-screen hero image */
+    .hero {
+      height: 100vh; /* Full screen height */
+      background: url(images/business1.jpg) center center/cover no-repeat;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+    }
+
+    /* Dark transparent overlay */
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent overlay */
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .navbar-brand {
+      background-color: #c6ff00;
+      padding: 5px 15px;
+      font-weight: bold;
+      color: black !important;
+    }
+
+    .btn-green {
+      background-color: #c6ff00;
+      color: black;
+      font-weight: bold;
+    }
+
+    .btn-darkgreen {
+      background-color: #1b5e20;
+      color: white;
+      font-weight: bold;
+    }
+
+    .navbar .nav-link {
+      color: white;
+    }
+
+    .navbar .nav-link:hover {
+      color: rgb(94, 232, 94);
+    }
+
+    /* Ensure content below navbar is visible */
+    body {
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Transparent Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">BizLift</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto me-3">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Service</a></li>
+          <li class="nav-item"><a class="nav-link" href="pages.html">Pages</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+        </ul>
+       
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <p class="text-success fw-bold">Solutions For Your Business</p>
+      <h1 class="display-5 fw-bold">
+        Everything You Need To <br />-                                         
+        Start And Run Your <br />
+        Business Grow
+      </h1>
+      <div class="mt-4 d-flex justify-content-center gap-3">
+        <a href="#" class="btn btn-green px-4 py-2">Learn More</a>
+        <a href="#" class="btn btn-darkgreen px-4 py-2">Find Services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
