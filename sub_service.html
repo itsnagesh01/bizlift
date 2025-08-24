@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -122,12 +123,58 @@
     .nav-item.dropdown:hover .dropdown-menu {
       display: block;
     }
+
+    /* New card section styles */
+    .service-cards {
+      padding: 0 40px 40px 40px;
+    }
+    .service-cards h2 {
+      text-align: center;
+      color:white;
+      margin-bottom: 20px;
+    }
+    .cards-container {
+      display: flex;
+      justify-content: center;
+      gap: 40px 100px;
+      flex-wrap: wrap;
+       max-width: 960px; /* 3 cards x 250px width + gaps */
+  margin: 0 auto;
+    }
+    .service-card {
+      background-color: #000;
+      border: 1px solid #fff; /* White border by default */
+      border-radius: 8px;
+      padding: 20px;
+      width: 250px;
+      color: #fff;
+      transition: border-color 0.3s ease;
+      cursor: pointer;
+      justify-content: center;
+      text-align: center;
+    }
+    .service-card:hover {
+      border-color: #c5ff3f; /* Green border on hover */
+      
+    }
+    .icon-circle {
+      background-color: #c5ff3f;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 15px;
+      color: #000; /* black icon color for contrast */
+      font-size: 24px;
+    }
   </style>
 </head>
 <body>
   <header>
     <div class="topbar">
-      <div class="logo">🟢 BizLift</div>
+      <div class="logo"> BizLift</div>
       <nav>
         <ul>
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
@@ -141,7 +188,7 @@
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="sub_service.html">Service</a></li>
               <li><a class="dropdown-item" href="service_details.html">Details</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
+
             </ul>
           </li>
 
@@ -161,30 +208,89 @@
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
         </ul>
       </nav>
-      <div class="icons">
-        🔍 ☰
-        <a href="#">🔗</a><a href="#">🔗</a><a href="#">🔗</a><a href="#">🔗</a>
-      </div>
+      
     </div>
   </header>
 
-<section class="hero">
-  <div class="hero-text">
-    <h1>Service</h1>
-    <p>
-      <span class="home-icon">🏠</span> 
-      <a href="index.html" style="color: #fff; text-decoration: underline;">Home</a> &nbsp; › &nbsp; Service
-    </p>
-  </div>
-  <div class="hero-image">
-    <img src="images/ai-generated-8534841_1280.png" alt="Business Illustration" />
-  </div>
-</section>
-
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Service</h1>
+      <p>
+        <span class="home-icon">🏠</span> 
+        <a href="index.html" style="color: #fff; text-decoration: underline;">Home</a> &nbsp; › &nbsp; Service
+      </p>
+    </div>
+    <div class="hero-image">
+      <img src="images/ai-generated-8534841_1280.png" alt="Business Illustration" />
+    </div>
+  </section>
 
   <section class="latest-service">
     <p>🌿 Latest Service</p>
   </section>
+
+ 
+
+     <!-- New Service Cards Section -->
+<section class="service-cards">
+  <h2>Empowering Your Business Growth</h2>
+  <div class="cards-container">
+    <div class="service-card">
+      <div class="icon-circle">💼</div>
+      <h3>Investment Advisory</h3>
+      <p>We approached WiaTech with complex project deliver</p>
+       <a href="service_details.html" style="font-weight: bold; color: white; text-decoration: none;">Read More →</a>
+     </div>
+
+    <div class="service-card">
+      <div class="icon-circle">📊</div>
+      <h3>Brand  Strategy</h3>
+      <p>We approached WiaTech with complex project deliver</p>
+          <a href="service_details.html" style="font-weight: bold; color: white; text-decoration: none;">Read More →</a>
+    </div>
+
+    <div class="service-card">
+      <div class="icon-circle">📈</div>
+      <h3>Marketing Strategy</h3>
+      <p>We approached WiaTech with complex project deliver</p>
+    <a href="service_details.html" style="font-weight: bold; color: white; text-decoration: none;">Read More →</a>
+    </div>
+
+    <div class="service-card">
+      <div class="icon-circle">🚀</div>
+      <h3>Startup Guidance</h3>
+      <p>We approached WiaTech with complex project deliver</p>
+   <a href="service_details.html" style="font-weight: bold; color: white; text-decoration: none;">Read More →</a>
+    </div>
+    <div class="service-card">
+      <div class="icon-circle">💰</div>
+      <h3>Financial Planning</h3>
+      <p>We approached WiaTech with complex project deliver</p>
+    <a href="service_details.html" style="font-weight: bold; color: white; text-decoration: none;">Read More →</a>
+    </div>
+    <div class="service-card">
+      <div class="icon-circle">📞</div>
+      <h3>Customer Service</h3>
+      <p>We approached WiaTech with complex project deliver</p>
+           <a href="service_details.html" style="font-weight: bold; color: white; text-decoration: none;">Read More →</a>
+    </div>
+  </div>
+</section>
+<!--card section endddd-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

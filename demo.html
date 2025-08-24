@@ -2,192 +2,182 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-<<<<<<< HEAD
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Business Growth Consulting</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Service - BISCOX</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap">
   <style>
     body {
-      background-color: #121212;
-      color: #e0ff99;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-    .section-title {
-      border-left: 5px solid #c0ff33;
-      padding-left: 10px;
-      margin-bottom: 1rem;
-    }
-    .card {
-      background-color: #222;
-      border: 1px solid #c0ff33;
-      transition: transform 0.3s ease;
-    }
-    .card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 0 15px #c0ff33;
-    }
-    .icon-circle {
-      background-color: #c0ff33;
-      color: #121212;
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 24px;
-      margin-bottom: 1rem;
-=======
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BISCOX - Business Consulting</title>
-
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-
-  <!-- Font Awesome -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
-
-  <style>
-    /* Full-screen hero image */
-    .hero {
-      height: 100vh; /* Full screen height */
-      background: url(images/home1.jpg) center center/cover no-repeat;
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: white;
-    }
-
-    /* Dark transparent overlay */
-    .hero::before {
-      content: "";
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent overlay */
-      z-index: 1;
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 2;
-    }
-
-    .navbar-brand {
-      padding: 5px 15px;
-      font-weight: bold;
-      color:#c6ff00 !important;
-    }
-
-    .btn-green {
-      background-color: #c6ff00;
-      color: black;
-      font-weight: bold;
-    }
-
-    .btn-darkgreen {
-      background-color: #1b5e20;
-      color: white;
-      font-weight: bold;
-    }
-
-    .navbar .nav-link {
-      color: white;
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #111;
+      color: #fff;
     }
 
     .navbar .nav-link:hover {
       color: rgb(94, 232, 94);
     }
 
-    /* Ensure content below navbar is visible */
-    body {
+    .topbar {
+      background-color: #000;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 40px;
+    }
+
+    .logo {
+      color: #c5ff3f;
+      font-weight: bold;
+      font-size: 24px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
       margin: 0;
     }
 
-    /* Show dropdown on hover */
+    nav ul li {
+      position: relative;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .icons a {
+      margin-left: 10px;
+      color: #fff;
+    }
+
+    .hero {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 60px 40px;
+      background-color: #1a1a1a;
+    }
+
+    .hero-text h1 {
+      font-size: 48px;
+      margin: 0;
+    }
+
+    .hero-text p {
+      margin-top: 10px;
+      color: #ccc;
+    }
+
+    .hero-image img {
+      width: 300px;
+    }
+
+    .latest-service {
+      background-color: #000;
+      text-align: center;
+      padding: 20px;
+      color: #c5ff3f;
+      font-weight: bold;
+    }
+
+    nav ul li a.nav-link {
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a.nav-link:hover {
+      color: rgb(94, 232, 94);
+    }
+
+    /* Dropdown styles */
+    .dropdown-menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #222;
+      display: none;
+      padding: 10px 0;
+      min-width: 160px;
+      z-index: 999;
+    }
+
+    .dropdown-menu li {
+      padding: 5px 20px;
+    }
+
+    .dropdown-menu li a {
+      color: #fff;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-menu li a:hover {
+      background-color: #333;
+      color: #c5ff3f;
+    }
+
     .nav-item.dropdown:hover .dropdown-menu {
       display: block;
-      margin-top: 0;
->>>>>>> a581316dc4622a4f5c133985bc69ad8117da8f25
+    }
+
+    /* New card section styles */
+    .service-cards {
+      padding: 0 40px 40px 40px;
+    }
+    .service-cards h2 {
+      text-align: center;
+      color: #c5ff3f;
+      margin-bottom: 20px;
+    }
+    .cards-container {
+      display: flex;
+      justify-content: center;
+      gap: 40px 100px;
+      flex-wrap: wrap;
+       max-width: 960px; /* 3 cards x 250px width + gaps */
+  margin: 0 auto;
+    }
+    .service-card {
+      background-color: #000;
+      border: 1px solid #fff; /* White border by default */
+      border-radius: 8px;
+      padding: 20px;
+      width: 250px;
+      color: #fff;
+      transition: border-color 0.3s ease;
+      cursor: pointer;
+    }
+    .service-card:hover {
+      border-color: #c5ff3f; /* Green border on hover */
+      
+    }
+    .icon-circle {
+      background-color: #c5ff3f;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 15px;
+      color: #000; /* black icon color for contrast */
+      font-size: 24px;
     }
   </style>
 </head>
 <body>
-
-<<<<<<< HEAD
-<div class="container py-5">
-  <h1 class="text-center mb-5">Empowering Your Business Growth</h1>
-
-  <div class="row g-4">
-    <div class="col-md-6 col-lg-4">
-      <div class="card p-4">
-        <div class="icon-circle mb-3">
-          💼
-        </div>
-        <h4 class="section-title">Business Growth Consulting</h4>
-        <p>Customized strategies to scale your business efficiently and sustainably.</p>
-      </div>
-    </div>
-
-    <div class="col-md-6 col-lg-4">
-      <div class="card p-4">
-        <div class="icon-circle mb-3">
-          💰
-        </div>
-        <h4 class="section-title">Financial Planning</h4>
-        <p>Effective budgeting and investment planning to maximize returns and minimize risks.</p>
-      </div>
-    </div>
-
-    <div class="col-md-6 col-lg-4">
-      <div class="card p-4">
-        <div class="icon-circle mb-3">
-          🚀
-        </div>
-        <h4 class="section-title">Startup Guidance</h4>
-        <p>Step-by-step mentoring to launch your startup with confidence and clarity.</p>
-      </div>
-    </div>
-
-    <div class="col-md-6 col-lg-4">
-      <div class="card p-4">
-        <div class="icon-circle mb-3">
-          📈
-        </div>
-        <h4 class="section-title">Marketing Strategy</h4>
-        <p>Innovative marketing plans to increase brand visibility and attract customers.</p>
-      </div>
-    </div>
-
-    <div class="col-md-6 col-lg-4">
-      <div class="card p-4">
-        <div class="icon-circle mb-3">
-          🌟
-        </div>
-        <h4 class="section-title">Brand Strategy</h4>
-        <p>Building a strong brand identity that resonates with your target audience.</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
-=======
-  <!-- Transparent Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top">
-    <div class="container">
-      <a class="navbar-brand" href="#">BizLift</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto me-3">
+  <header>
+    <div class="topbar">
+      <div class="logo">🟢 BizLift</div>
+      <nav>
+        <ul>
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+
+          <!-- ✅ Services Dropdown -->
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button">
               Services
@@ -195,41 +185,99 @@
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="sub_service.html">Service</a></li>
               <li><a class="dropdown-item" href="service_details.html">Details</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
+
             </ul>
           </li>
+
           <li class="nav-item"><a class="nav-link" href="pages.html">Pages</a></li>
-          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+
+          <!-- ✅ Blog Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button">
+              Blog
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="blog_grid.html">Blog Grid</a></li>
+              <li><a class="dropdown-item" href="blog_details.html">Blog Details</a></li>
+            </ul>
+          </li>
+
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
         </ul>
+      </nav>
+      <div class="icons">
+         ☰
+        <a href="#">🔗</a><a href="#">🔗</a><a href="#">🔗</a><a href="#">🔗</a>
       </div>
     </div>
-  </nav>
+  </header>
 
-  <!-- Hero Section -->
   <section class="hero">
-    <div class="hero-content">
-      <p class="fw-bold" style="color:#c6ff00">Solutions For Your Business</p>
-      <h1 class="display-5 fw-bold">
-        Start Smart <br />
-        Grow Fast <br />
-        Lead With Confidence
-      </h1>
-      <div class="mt-4 d-flex justify-content-center gap-3">
-        <a href="#" class="btn btn-green px-4 py-2">Learn More</a>
-        <a href="services.html" class="btn btn-darkgreen px-4 py-2">Find Services</a>
-      </div>
+    <div class="hero-text">
+      <h1>Service</h1>
+      <p>
+        <span class="home-icon">🏠</span> 
+        <a href="index.html" style="color: #fff; text-decoration: underline;">Home</a> &nbsp; › &nbsp; Service
+      </p>
+    </div>
+    <div class="hero-image">
+      <img src="images/ai-generated-8534841_1280.png" alt="Business Illustration" />
     </div>
   </section>
 
-  <main>
-    <section>
-      <!-- Future Content -->
-    </section>
-  </main>
+  <section class="latest-service">
+    <p>🌿 Latest Service</p>
+  </section>
 
-  <!-- Bootstrap JS -->
+ 
+
+     <!-- New Service Cards Section -->
+<section class="service-cards">
+  <h2>Empowering Your Business Growth</h2>
+  <div class="cards-container">
+    <div class="service-card">
+      <div class="icon-circle">💼</div>
+      <h3>Investment Advisory</h3>
+      <p>We approached WiaTech with complex project deliver</p>
+       <a href="service_details.html" style="font-weight: bold; color: white; text-decoration: none;">Read More →</a>
+     </div>
+
+    <div class="service-card">
+      <div class="icon-circle">📊</div>
+      <h3>Brand  Strategy</h3>
+      <p>We approached WiaTech with complex project deliver</p>
+          <a href="service_details.html" style="font-weight: bold; color: white; text-decoration: none;">Read More →</a>
+    </div>
+
+    <div class="service-card">
+      <div class="icon-circle">📈</div>
+      <h3>Marketing Strategy</h3>
+      <p>We approached WiaTech with complex project deliver</p>
+    <a href="service_details.html" style="font-weight: bold; color: white; text-decoration: none;">Read More →</a>
+    </div>
+
+    <div class="service-card">
+      <div class="icon-circle">🚀</div>
+      <h3>Startup Guidance</h3>
+      <p>We approached WiaTech with complex project deliver</p>
+   <a href="service_details.html" style="font-weight: bold; color: white; text-decoration: none;">Read More →</a>
+    </div>
+    <div class="service-card">
+      <div class="icon-circle">💰</div>
+      <h3>Financial Planning</h3>
+      <p>We approached WiaTech with complex project deliver</p>
+    <a href="service_details.html" style="font-weight: bold; color: white; text-decoration: none;">Read More →</a>
+    </div>
+    <div class="service-card">
+      <div class="icon-circle">📞</div>
+      <h3>Customer Service</h3>
+      <p>We approached WiaTech with complex project deliver</p>
+           <a href="service_details.html" style="font-weight: bold; color: white; text-decoration: none;">Read More →</a>
+    </div>
+  </div>
+</section>
+<!--card section endddd-->
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
->>>>>>> a581316dc4622a4f5c133985bc69ad8117da8f25
