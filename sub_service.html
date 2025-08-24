@@ -1,11 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Service - BISCOX</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #111;
+      color: #fff;
+    }
+
+    .navbar .nav-link:hover {
+      color: rgb(94, 232, 94);
+    }
+
+    .topbar {
+      background-color: #000;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 40px;
+    }
+
+    .logo {
+      color: #c5ff3f;
+      font-weight: bold;
+      font-size: 24px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin: 0;
+    }
+
+    nav ul li {
+      position: relative;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .icons a {
+      margin-left: 10px;
+      color: #fff;
+    }
+
+    .hero {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 60px 40px;
+      background-color: #1a1a1a;
+    }
+
+    .hero-text h1 {
+      font-size: 48px;
+      margin: 0;
+    }
+
+    .hero-text p {
+      margin-top: 10px;
+      color: #ccc;
+    }
+
+    .hero-image img {
+      width: 300px;
+    }
+
+    .latest-service {
+      background-color: #000;
+      text-align: center;
+      padding: 20px;
+      color: #c5ff3f;
+      font-weight: bold;
+    }
+
+    nav ul li a.nav-link {
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a.nav-link:hover {
+      color: rgb(94, 232, 94);
+    }
+
+    /* Dropdown styles */
+    .dropdown-menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #222;
+      display: none;
+      padding: 10px 0;
+      min-width: 160px;
+      z-index: 999;
+    }
+
+    .dropdown-menu li {
+      padding: 5px 20px;
+    }
+
+    .dropdown-menu li a {
+      color: #fff;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-menu li a:hover {
+      background-color: #333;
+      color: #c5ff3f;
+    }
+
+    .nav-item.dropdown:hover .dropdown-menu {
+      display: block;
+    }
+  </style>
 </head>
 <body>
-    <h1>this is service page under services</h1>
+  <header>
+    <div class="topbar">
+      <div class="logo">🟢 BizLift</div>
+      <nav>
+        <ul>
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+
+          <!-- ✅ Services Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button">
+              Services
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="sub_service.html">Service</a></li>
+              <li><a class="dropdown-item" href="service_details.html">Details</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item"><a class="nav-link" href="pages.html">Pages</a></li>
+
+          <!-- ✅ Blog Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button">
+              Blog
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="blog_grid.html">Blog Grid</a></li>
+              <li><a class="dropdown-item" href="blog_details.html">Blog Details</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+      <div class="icons">
+        🔍 ☰
+        <a href="#">🔗</a><a href="#">🔗</a><a href="#">🔗</a><a href="#">🔗</a>
+      </div>
+    </div>
+  </header>
+
+<section class="hero">
+  <div class="hero-text">
+    <h1>Service</h1>
+    <p>
+      <span class="home-icon">🏠</span> 
+      <a href="index.html" style="color: #fff; text-decoration: underline;">Home</a> &nbsp; › &nbsp; Service
+    </p>
+  </div>
+  <div class="hero-image">
+    <img src="images/ai-generated-8534841_1280.png" alt="Business Illustration" />
+  </div>
+</section>
+
+
+  <section class="latest-service">
+    <p>🌿 Latest Service</p>
+  </section>
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
