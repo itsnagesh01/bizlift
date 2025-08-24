@@ -89,7 +89,7 @@
       }
       /* Control carousel images */
       .carousel-item img {
-        height: 100vh; /* fit screen height */
+        height: 50vh; /* fit screen height */
         object-fit: cover; /* prevent distortion */
       }
       .navbar-dark {
@@ -106,7 +106,7 @@
       .navbar-nav .nav-link:hover {
         color: #c6ff00 !important; /* neon green hover */
       }
-      
+
       .btn-buy {
         background-color: #76ff03;
         color: black;
@@ -118,12 +118,15 @@
         background-color: #64dd17;
       }
       .dropdown-menu li a:hover {
-      background-color: #333;
-      color: #c5ff3f;
-    }
-    .text-bizlift {
-  color: #c6ff00;
-}
+        background-color: #333;
+        color: #c5ff3f;
+      }
+      .text-bizlift {
+        color: #c6ff00;
+      }
+      .text-insta {
+        color: #d63384;
+      }
     </style>
   </head>
   <body>
@@ -149,8 +152,12 @@
         <!-- Nav Links -->
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About Us</a>
+            </li>
             <li class="nav-item dropdown">
               <a
                 class="nav-link dropdown-toggle"
@@ -175,7 +182,9 @@
                 </li>
               </ul>
             </li>
-            <li class="nav-item"><a class="nav-link" href="pages.html">Pages</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages.html">Pages</a>
+            </li>
             <li class="nav-item dropdown">
               <a
                 class="nav-link dropdown-toggle"
@@ -355,11 +364,54 @@
         </div>
       </div>
     </section>
+    <!--Slider End-->
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 mt-4">
+            <div class="card" style="width: 18rem">
+              <img src="images/card1.jpg" class="card-img-top" alt="Advisor Image Here" />
+              <div class="card-body">
+                <h5 class="card-title">Advisor, Body, and Soul: Holistic Approac Digital</h5>
+                <a href="#" class="btn btn-primary">Read More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mt-4">
+            <div class="card" style="width: 18rem">
+              <img src="images/card2.jpg" class="card-img-top" alt="Nurturing creativity Image Here" />
+              <div class="card-body">
+                <h5 class="card-title">Nurturing creativity & collaboration you Definitely</h5>
+                <a href="#" class="btn btn-primary">Read More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mt-4">
+            <div class="card" style="width: 18rem">
+              <img src="images/card3.jpg" class="card-img-top" alt="Business skills image here" />
+              <div class="card-body">
+                <h5 class="card-title">Skills That you Definitely Miss For the Business</h5>
+                <a href="#" class="btn btn-primary">Read More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mt-4">
+            <div class="card" style="width: 18rem">
+              <img src="images/card4.jpg" class="card-img-top" alt="Productivity Image Here" />
+              <div class="card-body">
+                <h5 class="card-title">The Art of Productivity: Finance Transforming Your</h5>
+                
+                <a href="#" class="btn btn-primary">Read More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- Footer Start -->
     <footer class="text-center bg-dark text-white mt-3 py-3">
       <p>
-        © 2025     <span class="text-bizlift">BizLift</span>  | All Rights
-        Reserved.
+        © 2025 <span class="text-bizlift">BizLift</span> | All Rights Reserved.
       </p>
 
       <div>
@@ -367,7 +419,7 @@
           ><i class="bi bi-facebook text-primary fs-3"></i
         ></a>
         <a href="https://www.instagram.com/" class="text-white me-3"
-          ><i class="bi bi-instagram text-danger fs-3"></i
+          ><i class="bi bi-instagram text-insta fs-3"></i
         ></a>
         <a href="https://twitter.com/" class="text-white"
           ><i class="bi bi-twitter text-primary fs-3"></i
