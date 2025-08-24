@@ -14,7 +14,7 @@
   <style>
     /* Full-screen hero image */
     .hero {
-      height: 100vh; /* Full screen height */
+      height: 100vh;
       background: url(images/home1.jpg) center center/cover no-repeat;
       position: relative;
       display: flex;
@@ -24,13 +24,12 @@
       color: white;
     }
 
-    /* Dark transparent overlay */
     .hero::before {
       content: "";
       position: absolute;
       top: 0; left: 0;
       width: 100%; height: 100%;
-      background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent overlay */
+      background-color: rgba(0, 0, 0, 0.6);
       z-index: 1;
     }
 
@@ -65,7 +64,6 @@
       color: rgb(94, 232, 94);
     }
 
-    /* Ensure content below navbar is visible */
     body {
       margin: 0;
     }
@@ -90,6 +88,8 @@
         <ul class="navbar-nav ms-auto me-3">
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+          
+          <!-- Services Dropdown -->
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button">
               Services
@@ -100,8 +100,21 @@
               <li><a class="dropdown-item" href="#">Something else here</a></li>
             </ul>
           </li>
+
           <li class="nav-item"><a class="nav-link" href="pages.html">Pages</a></li>
-          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+
+          <!-- Blog Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button">
+              Blog
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="blog_grid.html">Blog Grid</a></li>
+              <li><a class="dropdown-item" href="blog_details.html">BlogDetails</a></li>
+              <li><a class="dropdown-item" href="#">something else hrer</a></li>
+            </ul>
+          </li>
+
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
         </ul>
       </div>
