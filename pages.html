@@ -14,7 +14,7 @@
   <style>
     /* Full-screen hero image */
     .hero {
-      height: 100vh;
+      height: 100vh; /* Full screen height */
       background: url(images/home1.jpg) center center/cover no-repeat;
       position: relative;
       display: flex;
@@ -24,12 +24,13 @@
       color: white;
     }
 
+    /* Dark transparent overlay */
     .hero::before {
       content: "";
       position: absolute;
       top: 0; left: 0;
       width: 100%; height: 100%;
-      background-color: rgba(0, 0, 0, 0.6);
+      background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent overlay */
       z-index: 1;
     }
 
@@ -41,7 +42,7 @@
     .navbar-brand {
       padding: 5px 15px;
       font-weight: bold;
-      color:#c6ff00 !important;
+      color: #c6ff00 !important;
     }
 
     .btn-green {
@@ -64,6 +65,7 @@
       color: rgb(94, 232, 94);
     }
 
+    /* Ensure content below navbar is visible */
     body {
       margin: 0;
     }
@@ -88,32 +90,33 @@
         <ul class="navbar-nav ms-auto me-3">
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-          
-          <!-- Services Dropdown -->
+
+          <!-- ✅ Services Dropdown Start -->
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button">
+            <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Services
             </a>
-            <ul class="dropdown-menu">
+            <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
               <li><a class="dropdown-item" href="sub_service.html">Service</a></li>
               <li><a class="dropdown-item" href="service_details.html">Details</a></li>
               <li><a class="dropdown-item" href="#">Something else here</a></li>
             </ul>
           </li>
+          <!-- ✅ Services Dropdown End -->
 
           <li class="nav-item"><a class="nav-link" href="pages.html">Pages</a></li>
 
-          <!-- Blog Dropdown -->
+          <!-- ✅ Blog Dropdown Start -->
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button">
+            <a class="nav-link dropdown-toggle" href="#" id="blogDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Blog
             </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="blog.html">All Posts</a></li>
-              <li><a class="dropdown-item" href="blog-single.html">Single Post</a></li>
-              <li><a class="dropdown-item" href="#">Blog Category</a></li>
+            <ul class="dropdown-menu" aria-labelledby="blogDropdown">
+              <li><a class="dropdown-item" href="blog_grid.html">Blog Grid</a></li>
+              <li><a class="dropdown-item" href="blog_details.html">Blog Details</a></li>
             </ul>
           </li>
+          <!-- ✅ Blog Dropdown End -->
 
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
         </ul>
@@ -145,5 +148,6 @@
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
