@@ -89,8 +89,10 @@
       }
       /* Control carousel images */
       .carousel-item img {
-        height: 50vh; /* fit screen height */
+        width:100%; /* fit screen height */
+        height:100%;
         object-fit: cover; /* prevent distortion */
+        height: 70vh;
       }
       .navbar-dark {
         background-color: #000; /* Black background */
@@ -263,18 +265,23 @@
               data-bs-slide-to="5"
               aria-label="Slide 6"
             ></button>
-            <button
-              type="button"
-              data-bs-target="#carouselExampleCaptions"
-              data-bs-slide-to="6"
-              aria-label="Slide 7"
-            ></button>
+            
           </div>
           <!--Slider Start-->
           <div class="carousel-inner">
             <div class="carousel-item active" data-bs-interval="1500">
               <img
-                src="images/blog_metting.png"
+                src="images/blog1.jpg"
+                class="d-block  custom-img"
+                alt="..."
+              />
+              <div class="carousel-caption d-none d-md-block">
+                <p class="text-black"></p>
+              </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="1500">
+              <img
+                src="images/blog2.jpg"
                 class="d-block w-100 custom-img"
                 alt="..."
               />
@@ -285,26 +292,6 @@
             <div class="carousel-item" data-bs-interval="1500">
               <img
                 src="images/blog_office.jpg"
-                class="d-block w-100 custom-img"
-                alt="..."
-              />
-              <div class="carousel-caption d-none d-md-block">
-                <p class="text-black"></p>
-              </div>
-            </div>
-            <div class="carousel-item" data-bs-interval="1500">
-              <img
-                src="images/Blog1.jpg"
-                class="d-block w-100 custom-img"
-                alt="..."
-              />
-              <div class="carousel-caption d-none d-md-block">
-                <p class="text-black"></p>
-              </div>
-            </div>
-            <div class="carousel-item" data-bs-interval="1500">
-              <img
-                src="images/blog2.jpg"
                 class="d-block w-100 custom-img"
                 alt="..."
               />
@@ -342,6 +329,7 @@
                 <p class="text-black"></p>
               </div>
             </div>
+            
           </div>
           <button
             class="carousel-control-prev"
