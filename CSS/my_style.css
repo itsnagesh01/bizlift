@@ -171,6 +171,8 @@
 
 /* Video Section */
 .video-section {
+  background-color: #1d3b32;
+  border-radius: 1rem;
   text-align: center;
   margin-top: 1rem; /* small spacing at top */
 }
@@ -183,8 +185,8 @@
 
 /* Video Iframe */
 .video-frame {
-  width: 350px;
+  width: 450px;
   height: 255px;
   border: none; /* remove default frame border */
-  border-radius: 0.5rem; /* optional rounded corners like features */
+  border-radius: 1rem; /* optional rounded corners like features */
 }
