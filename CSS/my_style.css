@@ -1,0 +1,190 @@
+
+      /* Full-screen hero image */
+      .custom-img {
+        width: 1230px;
+        height: 495px;
+        object-fit: cover; /* Crop the image nicely instead of stretching */
+        display: block;
+        margin: auto; /* Center the image */
+      }
+      .hero {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+      }
+
+      /* Dark transparent overlay */
+      .hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent overlay */
+        z-index: 1;
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+      }
+      .navbar-brand {
+        padding: 5px 15px;
+        font-weight: bold;
+        color: #c6ff00 !important;
+      }
+
+      .btn-green {
+        background-color: #c6ff00;
+        color: black;
+        font-weight: bold;
+      }
+
+      .btn-darkgreen {
+        background-color: #1b5e20;
+        color: white;
+        font-weight: bold;
+      }
+
+      .navbar .nav-link {
+        color: black;
+      }
+
+      .navbar .nav-link:hover {
+        color: rgb(94, 232, 94);
+      }
+
+      /* Ensure content below navbar is visible */
+      body {
+        margin: 10px;
+        padding:0px;
+      }
+      /* Control carousel images */
+      .carousel-item img {
+        width: 100%; /* fit screen height */
+        height: 100%;
+        object-fit: cover; /* prevent distortion */
+        height: 70vh;
+      }
+      .navbar-dark {
+        background-color: #000; /* Black background */
+      }
+      .navbar-brand img {
+        height: 40px;
+      }
+      .navbar-nav .nav-link {
+        font-weight: 600;
+        margin-right: 15px;
+        color: white !important;
+      }
+      .navbar-nav .nav-link:hover {
+        color: #c6ff00 !important; /* neon green hover */
+      }
+      /* Blog card hover effect */
+      .blog-card {
+        border: 3px solid ; /* Default border */
+        border-radius: 8px; /* Rounded corners */
+        overflow: hidden;
+      }
+
+      .blog-card:hover {
+        border-color: #c5ff3f; /* Green border on hover */
+      }
+
+      .btn-buy {
+        background-color: #76ff03;
+        color: black;
+        font-weight: bold;
+        border-radius: 5px;
+        padding: 5px 15px;
+      }
+      .btn-buy:hover{
+        background-color: #64dd17;
+      }
+      .dropdown-menu li a:hover {
+        background-color: #333;
+        color: #c5ff3f;
+      }
+      .text-bizlift {
+        color: #c6ff00;
+      }
+      .text-insta {
+        color: #d63384;
+      }
+     
+   /* Feature Box */
+.feature-box {
+  background-color: #1d3b32;
+  padding: 1rem; /* p-3 */
+  border-radius: 1rem; /* rounded-3 */
+}
+
+/* Feature Title */
+.feature-title {
+  color: white;
+  margin-bottom: 1rem; /* mb-3 */
+}
+
+/* Feature List */
+.feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Feature Item */
+.feature-item {
+  display: flex;
+  justify-content: space-between;
+  background-color: black;
+  color: white;
+  border-radius: 0.5rem; /* rounded */
+  padding: 0.5rem 1rem; /* px-3 py-2 */
+  margin-bottom: 0.5rem; /* mb-2 */
+}
+
+/* Badge Colors */
+.badge-new {
+  background-color: #28a745; /* bg-success */
+}
+
+.badge-pro {
+  background-color: #ffc107; /* bg-warning */
+}
+
+.badge-hot {
+  background-color: #dc3545; /* bg-danger */
+}
+
+.badge-check {
+  background-color: #0d6efd; /* bg-primary */
+}
+
+.badge-safe {
+  background-color: #17a2b8; /* bg-info */
+}
+
+/* Video Section */
+.video-section {
+  text-align: center;
+  margin-top: 1rem; /* small spacing at top */
+}
+
+/* Video Title */
+.video-title {
+  text-align: center;
+  margin-top: 0.25rem; /* similar to margin-top:4px */
+}
+
+/* Video Iframe */
+.video-frame {
+  width: 350px;
+  height: 255px;
+  border: none; /* remove default frame border */
+  border-radius: 0.5rem; /* optional rounded corners like features */
+}

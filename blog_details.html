@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Blog Grid</title>
 
+    <link href="CSS/my_style.css" rel="stylesheet" type="text/css" />
+
     <!-- Bootstrap CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
@@ -21,88 +23,7 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
       rel="stylesheet"
     />
-
-    <style>
-      /* Full-screen hero image */
-      .custom-img {
-        width: 1230px;
-        height: 495px;
-        object-fit: cover; /* Crop the image nicely instead of stretching */
-        display: block;
-        margin: auto; /* Center the image */
-      }
-
-      .navbar-brand {
-        padding: 5px 15px;
-        font-weight: bold;
-        color: #c6ff00 !important;
-      }
-
-      .btn-green {
-        background-color: #c6ff00;
-        color: black;
-        font-weight: bold;
-      }
-
-      .btn-darkgreen {
-        background-color: #1b5e20;
-        color: white;
-        font-weight: bold;
-      }
-
-      .navbar .nav-link {
-        color: black;
-      }
-
-      .navbar .nav-link:hover {
-        color: rgb(94, 232, 94);
-      }
-
-      /* Ensure content below navbar is visible */
-      body {
-        margin: 0;
-      }
-      /* Control carousel images */
-      .carousel-item img {
-        height: 100vh; /* fit screen height */
-        object-fit: cover; /* prevent distortion */
-      }
-      .navbar-dark {
-        background-color: #000; /* Black background */
-      }
-      .navbar-brand img {
-        height: 40px;
-      }
-      .navbar-nav .nav-link {
-        font-weight: 600;
-        margin-right: 15px;
-        color: white !important;
-      }
-      .navbar-nav .nav-link:hover {
-        color: #c6ff00 !important; /* neon green hover */
-      }
-      .btn-buy {
-        background-color: #76ff03;
-        color: black;
-        font-weight: bold;
-        border-radius: 5px;
-        padding: 5px 15px;
-      }
-      .btn-buy:hover {
-        background-color: #64dd17;
-      }
-      .dropdown-menu li a:hover {
-        background-color: #333;
-        color: #c5ff3f;
-      }
-      .text-bizlift {
-        color: #c6ff00;
-      }
-      .text-insta {
-        color: #d63384;
-      }
-    </style>
-  </head>
+</head>
   <body>
     <!-- Transparent Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark">
@@ -187,6 +108,185 @@
     <section class="hero">
       <div class="hero-content"></div>
     </section>
+     <!-- Advisor Modal Start -->
+    <section class="blog-details">
+
+    <div
+      class="modal fade"
+      id="Advisor"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-xl modal-dialog-scrollable">
+        <!-- Modal content with rounded corners and gradient -->
+        <div
+          class="modal-content text-white"
+          style="
+            background: linear-gradient(135deg, #343333, #02210c);
+            border-radius: 12px;
+            overflow: hidden;
+          "
+        >
+          <!-- Header -->
+          <div
+            class="modal-header text-white"
+            style="background: linear-gradient(135deg,black,black)"
+          >
+            <h1 class="modal-title fs-5" id="exampleModalLabel">
+              Advisor, Body, and Soul: Holistic Approach Digital
+            </h1>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+
+          <!-- Body -->
+          <div class="modal-body">
+            <section>
+              <div class="container-fluid">
+                <div class="row g-4">
+                  <!-- Left Column -->
+                  <div class="col-md-8">
+                    <img
+                      src="images/card11.jpg"
+                      class="img-fluid rounded shadow-sm mb-3"
+                    />
+                    <p>
+                      Web designing in a powerful way of just not an only
+                      professions, however, in a passion Company. We believe the
+                      idea that smart looking of any website is the impression
+                      on visitors.
+                    </p>
+                    <p>
+                      Web designing is not only a profession but a passion.
+                      Smart design always makes a strong impression.
+                    </p>
+            <!-- Gallery Section -->
+            <div class="row g-3">
+              <div class="col-md-6">
+                <div class="p-2">
+                  <img src="images/card2.jpg" class="img-fluid rounded" />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="p-2">
+                  <img src="images/card2.jpg" class="img-fluid rounded" />
+                </div>
+              </div>
+              <p>
+                      Web designing in a powerful way of just not an only
+                      professions, however, in a passion Company. We believe the
+                      idea that smart looking of any website is the impression
+                      on visitors.Web designing is not only a profession but a passion.
+                      Smart design always makes a strong impression.
+                      Web designing in a powerful way of just not an only
+                      professions, however, in a passion Company. We believe the
+                      idea that smart looking of any website is the impression
+                      on visitors.Web designing is not only a profession but a passion.
+                      Smart design always makes a strong impression.
+              </p><p>Web designing in a powerful way of just not an only
+                      professions, however, in a passion Company. We believe the
+                      idea that smart looking of any website is the impression
+                      on visitors.Web designing is not only a profession but a passion.
+                      Smart design always makes a strong impression.
+                      Web designing in a powerful way of just not an only
+                      professions, however, in a passion Company. We believe the
+                      idea that smart looking of any website is the impression
+                      on visitors.Web designing is not only a profession but a passion.
+                      Smart design always makes a strong impression.
+              </p>
+            </div>
+        </div>
+
+                  <!-- Right Column (Search Box) -->
+                        <div class="col-lg-4">
+        <!-- Search Box -->
+        <div class="p-3 rounded-3 mb-4" style="background-color:#1d3b32;">
+          <h5 class="text-white mb-3">Search Here</h5>
+          <div class="input-group">
+            <input type="text" class="form-control bg-black text-white" placeholder="Search here..." />
+            <button class="btn btn-success" type="button">
+              <i class="bi bi-search"></i> <!-- Bootstrap icon -->
+            </button>
+          </div>
+        </div>
+ <!-- Category List -->
+        <div class="p-3 rounded-3" style="background-color:#1d3b32;">
+          <h5 class="text-white mb-3">Category</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2">
+              <a href="blog_details.html" class="d-block text-white bg-black rounded px-3 py-2 text-decoration-none">Financial <span class="float-end">(2)</span></a>
+            </li>
+            <li class="mb-2">
+              <a href="#" class="d-block text-white bg-black rounded px-3 py-2 text-decoration-none">Advisor <span class="float-end">(2)</span></a>
+            </li>
+            <li class="mb-2">
+              <a href="#" class="d-block text-white bg-black rounded px-3 py-2 text-decoration-none">Business <span class="float-end">(1)</span></a>
+            </li>
+            <li class="mb-2">
+              <a href="#" class="d-block text-white bg-black rounded px-3 py-2 text-decoration-none">Digital <span class="float-end">(1)</span></a>
+            </li>
+            <li>
+              <a href="#" class="d-block text-white bg-black rounded px-3 py-2 text-decoration-none">Management <span class="float-end">(1)</span></a>
+            </li>
+          </ul>
+        </div>
+        <div class="recent-posts">
+    <h5>Recent Posts</h5>
+
+    <div class="post-item">
+        <p><i class="bi bi-calendar-event-fill"></i> August 25, 2025</p>
+        <a href="blog_grid.html">Horse Racing Skills That you Definitely Miss</a>
+    </div>
+
+    <div class="post-item">
+        <p><i class="bi bi-calendar-event-fill"></i> August 25, 2025</p>
+        <a href="">Mind, Body, and Soul: Holistic Approaches to</a>
+    </div>
+
+    <div class="post-item">
+        <p><i class="bi bi-calendar-event-fill"></i> August 25, 2025</p>
+        <a href="#">The Art of Productivity: Finance Transforming Your</a>
+    </div>
+
+    <div class="post-item">
+        <p><i class="bi bi-calendar-event-fill"></i> August 25, 2025</p>
+        <a href="#">Skills That you Definitely Miss For the Business</a>
+    </div>
+    <div class="post-item">
+        <p><i class="bi bi-calendar-event-fill"></i> August 25, 2025</p>
+        <a href="#">Skills That you Definitely Miss For the Commnuication</a>
+    </div>
+</div>
+
+                </div>
+              </div>
+            </section>
+
+          
+          </div>
+
+          <!-- Footer -->
+          <div
+            class="modal-footer text-white"
+            style="background: linear-gradient(135deg,black,black)"
+          >
+            <button
+              type="button"
+              class="btn btn-danger"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
     <!-- Footer Start -->
     <footer class="text-center bg-dark text-white mt-3 py-3">
       <p>
