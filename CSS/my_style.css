@@ -99,7 +99,9 @@
       }
 
       .blog-card:hover {
-        border-color: #c5ff3f; /* Green border on hover */
+        border-color:#76ff03 !important; /* Green border on hover */
+        border: 3px solid; /* Default border */
+
       }
 
       .blog-card.card-body{
@@ -287,4 +289,42 @@ ul.list-unstyled li:hover::after {
 /* Optional: smooth text transition */
 ul.list-unstyled li span.float-end {
   transition: all 0.3s ease;
+}
+
+/* Card Title Hover */
+.card-title {
+  transition: color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+.card-title:hover {
+  color: #64dd17;         /* bright green on hover */
+  transform: scale(1.05); /* slight zoom */
+}
+
+/* Card Button Hover */
+.card-body .btn {
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.card-body .btn:hover {
+  color: #000;                 /* text color on hover */
+  background-color: #64dd17;   /* green background on hover */
+  border-color: #64dd17;       /* match border */
+  transform: translateY(-2px); /* subtle lift */
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3); /* subtle shadow */
+}
+
+/* Optional: add arrow icon inside button on hover */
+.card-body .btn::after {
+  content: ' →';
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.card-body .btn:hover::after {
+  opacity: 1;
+  transform: translateX(5px);
 }
