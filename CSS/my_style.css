@@ -202,3 +202,8 @@
   border: none; /* remove default frame border */
   border-radius: 1rem; /* optional rounded corners like features */
 }
+.cta-box {
+   
+  background-color: #1d3b32;
+  border-radius: 1rem;
+  }
