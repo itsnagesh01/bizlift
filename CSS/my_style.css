@@ -1,11 +1,11 @@
 
       /* Full-screen hero image */
-      .custom-img {
-        width: 1230px;
-        height: 495px;
+      .custom-img,.carousel-item img {
+        width:100%;
+        height:70vh;
         object-fit: cover; /* Crop the image nicely instead of stretching */
         display: block;
-        margin: auto; /* Center the image */
+        margin:0; /* Center the image */
       }
       .hero {
         position: relative;
@@ -61,16 +61,14 @@
 
       /* Ensure content below navbar is visible */
       body {
-        margin: 10px;
-        padding:0px;
+        margin: 0;
+        padding:0;
+        overflow-x:hidden;
       }
-      /* Control carousel images */
-      .carousel-item img {
-        width: 100%; /* fit screen height */
-        height: 100%;
-        object-fit: cover; /* prevent distortion */
-        height: 70vh;
+      .modal{
+        display:none;
       }
+      
       .navbar-dark {
         background-color: #000; /* Black background */
       }
@@ -90,12 +88,28 @@
         border: 3px solid ; /* Default border */
         border-radius: 8px; /* Rounded corners */
         overflow: hidden;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+      .blog-card img{
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
       }
 
       .blog-card:hover {
-        border-color: #c5ff3f; /* Green border on hover */
+        border-color:#76ff03 !important; /* Green border on hover */
+        border: 3px solid; /* Default border */
+
       }
 
+      .blog-card.card-body{
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
       .btn-buy {
         background-color: #76ff03;
         color: black;
@@ -189,4 +203,128 @@
   height: 255px;
   border: none; /* remove default frame border */
   border-radius: 1rem; /* optional rounded corners like features */
+}
+.cta-box {
+   
+  background-color: #1d3b32;
+  border-radius: 1rem;
+  }
+/* Search input hover */
+.search-box input[type="text"]:hover {
+  border-color: #28a745; /* Change border color on hover */
+  box-shadow: 0 0 5px #28a745; /* Glow effect */
+}
+
+/* Category and Feature items hover */
+.feature-list li:hover {
+  background-color: #64dd17; /* Change background on hover */
+  color: #fff; /* Change text color */
+  cursor: pointer; /* Show pointer */
+  transform: translateX(5px); /* Slight move effect */
+  transition: all 0.3s ease; /* Smooth animation */
+}
+
+/* Optional: add hover effect on section headings */
+.feature-box:hover {
+  color: #28a745;
+  transition: color 0.3s ease;
+}
+.hover-effect:hover {
+  color: #c6ff00;  /* Change text color on hover */
+  cursor: pointer;  /* Optional: show pointer on hover */
+  transition: color 0.3s; /* Smooth color transition */
+}
+
+/* Container background */
+.p-3.rounded-3.mt-5 {
+  background-color: #1d3b32 !important; /* override inline/Bootstrap */
+}
+
+/* Category Title Hover */
+.category-title {
+  color: white !important;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.category-title:hover {
+  color:#c6ff00 !important;
+}
+
+/* Category List Items */
+ul.list-unstyled li {
+  position: relative;
+  background-color: #000 !important;  /* override bg-black */
+  color: #fff !important;             /* override text-white */
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+  transition: all 0.4s ease;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+/* Hover Effect with icon and animation */
+ul.list-unstyled li:hover {
+  background-color: #64dd17 !important;
+  color: #000 !important;
+  transform: translateX(5px) scale(1.03);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+/* Add an arrow icon on hover using ::after */
+ul.list-unstyled li::after {
+  content: '→';
+  position: absolute;
+  right: 15px;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+ul.list-unstyled li:hover::after {
+  opacity: 1;
+  right: 10px;
+}
+
+/* Optional: smooth text transition */
+ul.list-unstyled li span.float-end {
+  transition: all 0.3s ease;
+}
+
+/* Card Title Hover */
+.card-title {
+  transition: color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+.card-title:hover {
+  color: #64dd17;         /* bright green on hover */
+  transform: scale(1.05); /* slight zoom */
+}
+
+/* Card Button Hover */
+.card-body .btn {
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.card-body .btn:hover {
+  color: #000;                 /* text color on hover */
+  background-color: #64dd17;   /* green background on hover */
+  border-color: #64dd17;       /* match border */
+  transform: translateY(-2px); /* subtle lift */
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3); /* subtle shadow */
+}
+
+/* Optional: add arrow icon inside button on hover */
+.card-body .btn::after {
+  content: ' →';
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.card-body .btn:hover::after {
+  opacity: 1;
+  transform: translateX(5px);
 }
