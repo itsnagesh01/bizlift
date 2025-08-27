@@ -207,3 +207,28 @@
   background-color: #1d3b32;
   border-radius: 1rem;
   }
+/* Search input hover */
+.search-box input[type="text"]:hover {
+  border-color: #28a745; /* Change border color on hover */
+  box-shadow: 0 0 5px #28a745; /* Glow effect */
+}
+
+/* Category and Feature items hover */
+.feature-list li:hover {
+  background-color: #28a745; /* Change background on hover */
+  color: #fff; /* Change text color */
+  cursor: pointer; /* Show pointer */
+  transform: translateX(5px); /* Slight move effect */
+  transition: all 0.3s ease; /* Smooth animation */
+}
+
+/* Optional: add hover effect on section headings */
+.feature-box:hover {
+  color: #28a745;
+  transition: color 0.3s ease;
+}
+.hover-effect:hover {
+  color: #c6ff00;  /* Change text color on hover */
+  cursor: pointer;  /* Optional: show pointer on hover */
+  transition: color 0.3s; /* Smooth color transition */
+}
