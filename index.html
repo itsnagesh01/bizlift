@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BISCOX - Business Consulting</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+
+  <style>
+    /* Full-screen hero image */
+    .hero {
+      height: 100vh; /* Full screen height */
+      background: url(images/home1.jpg) center center/cover no-repeat;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+    }
+
+    /* Dark transparent overlay */
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent overlay */
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .navbar-brand {
+      padding: 5px 15px;
+      font-weight: bold;
+      color: #c6ff00 !important;
+    }
+
+    .btn-green {
+      background-color: #c6ff00;
+      color: black;
+      font-weight: bold;
+    }
+
+    .btn-darkgreen {
+      background-color: #1b5e20;
+      color: white;
+      font-weight: bold;
+    }
+
+    .navbar .nav-link {
+      color: white;
+    }
+
+    .navbar .nav-link:hover {
+      color: rgb(94, 232, 94);
+    }
+
+    /* Ensure content below navbar is visible */
+    body {
+      margin: 0;
+    }
+
+    /* Show dropdown on hover */
+    .nav-item.dropdown:hover .dropdown-menu {
+      display: block;
+      margin-top: 0;
+    }
+
+    .dropdown-menu {
+      background-color: black;
+    }
+
+    /* ✅ Dropdown item text color and hover effect */
+    .dropdown-item {
+      transition: color 0.3s ease-in-out;
+      color: white;
+    }
+
+    .dropdown-item:hover {
+      color: #c6ff00;
+      background-color: transparent;
+    }
+
+    .icon-circle {
+      width: 50px;
+      height: 50px;
+      background-color: #c6ff00;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+    }
+
+    .object-fit-cover {
+      object-fit: cover;
+    }
+
+    .text-bizlift {
+      color: #c6ff00;
+    }
+    .text-insta {
+      color: #d63384;
+    }
+
+   /* Flex setup for sticky footer */
+    html, body {
+      height: 100%;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+
+
+  </style>
+</head>
+<body>
+
+  <!-- Transparent Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">BizLift</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto me-3">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+
+          <!-- ✅ Services Dropdown Start -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Services
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+              <li><a class="dropdown-item" href="sub_service.html">Service</a></li>
+              <li><a class="dropdown-item" href="service_details.html">Details</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+          <!-- ✅ Services Dropdown End -->
+
+          <li class="nav-item"><a class="nav-link" href="pages.html">Pages</a></li>
+
+          <!-- ✅ Blog Dropdown Start -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="blogDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Blog
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="blogDropdown">
+              <li><a class="dropdown-item" href="blog_grid.html">Blog Grid</a></li>
+              <li><a class="dropdown-item" href="blog_details.html">Blog Details</a></li>
+            </ul>
+          </li>
+          <!-- ✅ Blog Dropdown End -->
+
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+<main> 
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <p class="fw-bold" style="color:#c6ff00">Solutions For Your Business</p>
+      <h1 class="display-5 fw-bold">
+        Start Smart <br />
+        Grow Fast <br />
+        Lead With Confidence
+      </h1>
+      <div class="mt-4 d-flex justify-content-center gap-3">
+        <a href="#" class="btn btn-green px-4 py-2">Learn More</a>
+        <a href="sub_service.html" class="btn btn-darkgreen px-4 py-2">Find Services</a>
+      </div>
+    </div>
+  </section>
+<!-- Marquee Section -->
+    <div style="background-color: yellowgreen; padding: 15px 0;">
+      <marquee behavior="scroll" direction="left" scrollamount="8" style="font-size: 1.8rem; font-weight: bold; color: #0d0d0d;">
+        🌟 Constructing Excellence &nbsp;&nbsp;&nbsp; 🔏 Breaking Barriers &nbsp;&nbsp;&nbsp; 💼 Creating Opportunities &nbsp;&nbsp;&nbsp; 🚀 Empowering Growth
+      </marquee>
+    </div>
+
+    <section class="py-5" style="background-color: #000;">
+      <!-- Reason For Choosing Our Consultancy -->
+      <section class="py-5 reason-section text-white" style="background: linear-gradient(to right, #000000 50%, #1a1f14 50%);">
+        <div class="container-fluid px-0">
+          <div class="row g-0 align-items-center">
+
+            <!-- Left Side Image -->
+            <div class="col-md-6">
+              <img src="images/home6.jpg" alt="Consultant Working" class="img-fluid w-100 h-100 object-fit-cover">
+            </div>
+
+            <!-- Right Content -->
+            <div class="col-md-6 px-5 py-4">
+              <p class="fw-bold mb-2" style="color: #c6ff00;">● We Provide Best Solution</p>
+              <h2 class="fw-bold display-5 mb-4">Reason For Choosing<br>Our Consultancy</h2>
+              <p class="text-light mb-4" style="max-width: 550px;">
+                Providing legal advice, contract drafting, coance assistance, intellectual property protection, and other legal support for businesses. Creating visual content, such as logos, brochures, infographics, and other.
+              </p>
+
+              <div class="d-flex align-items-start mb-4">
+                <div class="icon-circle me-3">
+                  <i class="fas fa-chart-bar text-dark"></i>
+                </div>
+                <div>
+                  <h5 class="text-white mb-1">Accounting and Bookkeeping</h5>
+                  <p class="text-light mb-0">We provide a range of digital marketing solutions.</p>
+                </div>
+              </div>
+
+              <div class="d-flex align-items-start">
+                <div class="icon-circle me-3">
+                  <i class="fas fa-headset text-dark"></i>
+                </div>
+                <div>
+                  <h5 class="text-white mb-1">Customer Service And Support</h5>
+                  <p class="text-light mb-0">Our pricing varies depending on the specific services you require.</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+  
+   <section class="py-5" style="background-color: #000;">
+      <div class="container">
+        <div class="row align-items-center justify-content-center">
+
+          <!-- Left Content -->
+          <div class="col-lg-7 col-md-8 text-white">
+            <p class="fw-bold mb-2 text-center" style="color: #c6ff00;">● Work Process</p>
+
+            <h2 class="fw-bold display-5 mb-4">Your Easy Business Process Explained</h2>
+            <p class="text-light mb-5">We help you simplify every step of your business journey. Our tailored approach ensures you get maximum value at every stage with top-notch support.</p>
+
+            <div class="mb-4">
+              <h5 class="fw-bold"><span style="color:#c6ff00;">01</span> Assess Requirements Precisely</h5>
+              <p class="text-light">We listen carefully and identify what your business truly needs.</p>
+            </div>
+
+            <div class="mb-4">
+              <h5 class="fw-bold"><span style="color:#c6ff00;">02</span> Develop Custom Solutions</h5>
+              <p class="text-light">Tailored strategies and tools are crafted to fit your goals.</p>
+            </div>
+
+            <div class="mb-4">
+              <h5 class="fw-bold"><span style="color:#c6ff00;">03</span> Implement And Support</h5>
+              <p class="text-light">We ensure smooth execution and offer continuous guidance.</p>
+            </div>
+          </div>
+
+          <!-- Right Side Images -->
+          <div class="col-lg-5 col-md-8 d-flex gap-3 justify-content-center mt-4 mt-lg-0">
+            <img src="images/home3.jpg" alt="Team Discussing" class="img-fluid rounded shadow" style="max-height: 220px;">
+            <img src="images/home4.jpg" alt="Consulting Meeting" class="img-fluid rounded shadow" style="max-height: 220px;">
+          </div>
+
+        </div>
+      </div>
+    </section>
+  
+</main>
+<!-- Footer Start -->
+  <footer class="text-center bg-dark py-3 mt-auto">
+    <p class="text-white mb-1">
+      © 2025 <span class="text-bizlift">BizLift</span> | All Rights Reserved.
+    </p>
+    <div>
+      <a href="https://www.facebook.com/" class="text-white me-3"><i class="bi bi-facebook text-primary fs-3"></i></a>
+      <a href="https://www.instagram.com/" class="text-white me-3"><i class="bi bi-instagram text-insta fs-3"></i></a>
+      <a href="https://twitter.com/" class="text-white"><i class="bi bi-twitter text-primary fs-3"></i></a>
+    </div>
+  </footer>
+  <!-- Footer End -->
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
+
