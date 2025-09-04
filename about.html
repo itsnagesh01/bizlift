@@ -162,6 +162,31 @@
 .text-lime {
   color: #c5ff3f;
 }
+/*video section*/ 
+.video-hero-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.video-hero-section img {
+  object-fit: cover;
+  height: 100%;
+}
+
+.play-btn {
+  background-color: #c5ff3f;
+  padding: 20px 30px;
+  font-size: 18px;
+  border-radius: 50px;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+.play-btn:hover {
+  background-color: #aee636;
+  color: black;
+}
+
 
 
 
@@ -265,25 +290,95 @@
   </div>
 </section>
 
-<!-- Video Section -->
-<section style="position: relative; background-color: black; overflow: hidden;">
-  <!-- Background Video Image -->
-  <img src="images/video-bg.jpg" alt="Video Background" style="width: 100%; height: auto; display: block;" />
+<!--video start-->
 
-  <!-- Overlay Play Button -->
-  <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center;">
-    <div style="width: 120px; height: 120px; border-radius: 50%; background-color: rgba(197, 255, 63, 0.8); display: flex; align-items: center; justify-content: center; cursor: pointer;">
-      <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" style="text-decoration: none; color: black; font-weight: bold; font-size: 16px;">
-        <i class="fas fa-play" style="font-size: 30px;"></i><br/>Play Video
-      </a>
+<section class="video-hero-section position-relative text-center">
+  <!-- Background Image -->
+  <img src="images/v4.jpg" alt="Video Preview" class="w-100 h-100 object-fit-cover position-absolute top-0 start-0 z-n1">
+
+  <!-- Overlay (dark transparent layer) -->
+  <div class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(0,0,0,0.4); z-index: 0;"></div>
+
+  <!-- Content in center -->
+  <div class="d-flex flex-column justify-content-center align-items-center position-relative py-5" style="min-height: 450px;">
+    <h2 class="text-white fw-bold mb-4 fs-1">Watch How We Empower Businesses</h2>
+
+    <!-- Play Button -->
+    <a href="https://www.youtube.com/watch?v=dJQn4DqzMVQ" target="_blank"
+       class="play-btn d-flex justify-content-center align-items-center text-black fw-bold text-decoration-none">
+      <i class="fas fa-play me-2"></i> Play Video
+    </a>
+  </div>
+</section>
+<!--video end -->
+
+
+
+<!-- Our Team Section Start -->
+<section class="py-5" style="background-color: #111;">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="text-lime fw-bold">Our Team</h2>
+      <p class="text-white">Meet our experienced and professional team members who are here to help you succeed.</p>
+
+    </div>
+    <div class="row g-4">
+
+      <!-- Team Member 1 -->
+      <div class="col-md-6 col-lg-3">
+        <div class="card bg-dark text-white border-0 h-100 shadow">
+          <img src="images/team2.avif" class="card-img-top" alt="Team Member 1">
+          <div class="card-body text-center">
+            <h5 class="card-title text-lime">Rahul Jadhav</h5>
+            <p class="card-text">Founder & Business Strategist</p>
+            <small class="text-secondary">15+ years experience in business development, startup mentoring, and leadership.</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- Team Member 2 -->
+      <div class="col-md-6 col-lg-3">
+        <div class="card bg-dark text-white border-0 h-100 shadow">
+          <img src="images/team1.avif" class="card-img-top" alt="Team Member 2">
+          <div class="card-body text-center">
+            <h5 class="card-title text-lime">Sneha Patil</h5>
+            <p class="card-text">Marketing Head</p>
+            <small class="text-secondary">Expert in digital marketing, branding, and customer engagement strategies.</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- Team Member 3 -->
+      <div class="col-md-6 col-lg-3">
+        <div class="card bg-dark text-white border-0 h-100 shadow">
+          <img src="images/team 3.webp" class="card-img-top" alt="Team Member 3">
+          <div class="card-body text-center">
+            <h5 class="card-title text-lime">Amit More</h5>
+            <p class="card-text">Finance Consultant</p>
+            <small class="text-secondary">CA with 10+ years of experience in business finance, auditing, and cost planning.</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- Team Member 4 -->
+      <div class="col-md-6 col-lg-3">
+        <div class="card bg-dark text-white border-0 h-100 shadow">
+          <img src="images/team4.webp" class="card-img-top" alt="Team Member 4">
+          <div class="card-body text-center">
+            <h5 class="card-title text-lime">Pooja Deshmukh</h5>
+            <p class="card-text">Startup Coach</p>
+            <small class="text-secondary">Guides early-stage entrepreneurs with business models, pitch decks, and growth plans.</small>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
+<!-- Our Team Section End -->
 
 
 
-
-  
 
 
 
