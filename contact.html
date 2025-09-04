@@ -146,6 +146,10 @@ nav ul {
       .text-insta {
         color: #d63384;
       }
+        .white-placeholder::placeholder {
+    color: white !important;
+    opacity: 1; /* Ensures full visibility */
+  }
 </style>
 </head>
 <body>
@@ -254,35 +258,36 @@ nav ul {
     </div>
 
     <!-- Right Form -->
-    <div class="col-md-6">
-      <div class="p-4 rounded" style="background-color: #1a322c;">
-        <form>
-          <div class="row g-3">
-            <div class="col-md-6">
-              <input type="text" class="form-control bg-black text-white border-secondary" placeholder="Your Name">
-            </div>
-            <div class="col-md-6">
-              <input type="email" class="form-control bg-black text-white border-secondary" placeholder="Your Email">
-            </div>
-            <div class="col-md-6">
-              <input type="text" class="form-control bg-black text-white border-secondary" placeholder="Phone Number">
-            </div>
-            <div class="col-md-6">
-              <input type="text" class="form-control bg-black text-white border-secondary" placeholder="Subject">
-            </div>
-            <div class="col-12">
-              <textarea class="form-control bg-black text-white border-secondary" rows="4" placeholder="Message here.."></textarea>
-            </div>
-            <div class="col-12">
-              <button type="submit" class="btn w-100" style="background-color: #d4ff4b; color: black; font-weight: 600;">
-                Send Now →
-              </button>
-            </div>
-          </div>
-        </form>
+   <!-- Right Form -->
+<div class="col-md-6">
+  <div class="p-4 rounded" style="background-color: #1a322c;">
+    <form>
+      <div class="row g-3">
+        <div class="col-md-6">
+          <input type="text" class="form-control bg-black text-white border-secondary white-placeholder" placeholder="Your Name">
+        </div>
+        <div class="col-md-6">
+          <input type="email" class="form-control bg-black text-white border-secondary white-placeholder" placeholder="Your Email">
+        </div>
+        <div class="col-md-6">
+          <input type="text" class="form-control bg-black text-white border-secondary white-placeholder" placeholder="Phone Number">
+        </div>
+        <div class="col-md-6">
+          <input type="text" class="form-control bg-black text-white border-secondary white-placeholder" placeholder="Subject">
+        </div>
+        <div class="col-12">
+          <textarea class="form-control bg-black text-white border-secondary white-placeholder" rows="4" placeholder="Message here.."></textarea>
+        </div>
+        <div class="col-12">
+          <button type="submit" class="btn w-100" style="background-color: #d4ff4b; color: black; font-weight: 600;">
+            Send Now →
+          </button>
+        </div>
       </div>
-    </div>
+    </form>
   </div>
+</div>
+ </div>
 </section>
 
 <!-- Footer Start -->
