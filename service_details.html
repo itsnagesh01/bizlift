@@ -1,169 +1,161 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
   <title>ServiceBizLift</title>
- 
 
   <!-- Bootstrap CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-<!-- Font Awesome (Latest) -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-
+  <!-- Font Awesome (Latest) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
   <style>
-   body {
-  margin: 0;
-  font-family: 'Inter', sans-serif;
-  background-color: #111;
-  color: #fff;
-}
+    html, body {
+      height: 100%;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      font-family: 'Inter', sans-serif;
+      background-color: #111;
+      color: #fff;
+    }
 
-.navbar .nav-link:hover,
-nav ul li a.nav-link:hover {
-  color: rgb(94, 232, 94);
-}
+    main {
+      flex: 1;
+    }
 
-.topbar {
-  background-color: #000;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px 40px;
-}
+    .navbar .nav-link:hover,
+    nav ul li a.nav-link:hover {
+      color: rgb(94, 232, 94);
+    }
 
-.logo {
-  color: #c5ff3f;
-  font-weight: bold;
-  font-size: 24px;
-}
+    .topbar {
+      background-color: #000;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 40px;
+    }
 
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-  margin: 0;
-}
+    .logo {
+      color: #c5ff3f;
+      font-weight: bold;
+      font-size: 24px;
+    }
 
-.nav ul li {
-  position: relative;
-}
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin: 0;
+    }
 
-.nav ul li a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 500;
-}
+    .nav ul li {
+      position: relative;
+    }
 
-/* Dropdown styles */
-.dropdown-menu {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: white;
-  display: none;
-  padding: 8px 0;
-  min-width: 180px;
-  border: 1px solid #ddd;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  z-index: 999;
-}
+    .nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+    }
 
-.dropdown-menu li {
-  padding: 0;
-}
+    /* Dropdown styles */
+    .dropdown-menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: white;
+      display: none;
+      padding: 8px 0;
+      min-width: 180px;
+      border: 1px solid #ddd;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      z-index: 999;
+    }
 
-.dropdown-menu li a {
-  color: black;
-  background-color: white;
-  text-decoration: none;
-  padding: 10px 20px;
-  display: block;
-  font-weight: 500;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
+    .dropdown-menu li a {
+      color: black;
+      background-color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      display: block;
+      font-weight: 500;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
 
-.dropdown-menu li a:hover {
-  background-color: #333;
-  color: #c5ff3f;
-}
+    .dropdown-menu li a:hover {
+      background-color: #333;
+      color: #c5ff3f;
+    }
 
-.nav-item.dropdown:hover .dropdown-menu {
-  display: block;
-}
+    .nav-item.dropdown:hover .dropdown-menu {
+      display: block;
+    }
 
-.hero {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 60px 40px;
-  background-color: #1a1a1a;
-}
+    .hero {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 60px 40px;
+      background-color: #1a1a1a;
+    }
 
-.hero-text h1 {
-  font-size: 48px;
-  margin: 0;
-}
+    .hero-text h1 {
+      font-size: 48px;
+      margin: 0;
+    }
 
-.hero-text p {
-  margin-top: 10px;
-  color: #ccc;
-}
+    .hero-text p {
+      margin-top: 10px;
+      color: #ccc;
+    }
 
-.hero-image img {
-  width: 300px;
-}
+    .hero-image img {
+      width: 300px;
+    }
 
-.breadcrumb-home {
-  color: #fff;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
+    .breadcrumb-home {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
 
-.breadcrumb-home:hover {
-  color: green; 
-  text-decoration: underline; 
-  
-}
-/* right side box */
+    .breadcrumb-home:hover {
+      color: green; 
+      text-decoration: underline; 
+    }
 
-.service-link {
-  background-color: #1c3b2f;
-  color: #fff;
-  text-decoration: none;
-  transition: background-color 0.3s, color 0.3s;
-  border: 1px solid yellowgreen;
-  font-size: 20px;
-}
+    .service-link {
+      background-color: #1c3b2f;
+      color: #fff;
+      text-decoration: none;
+      transition: background-color 0.3s, color 0.3s;
+      border: 1px solid yellowgreen;
+      font-size: 20px;
+    }
 
-.service-link:hover {
-  background-color:yellowgreen;
-  color: #000;
-}
-/*footer*/
-.text-bizlift {
-        color: #c6ff00;
-      }
-      .text-insta {
-        color: #d63384;
-      }
+    .service-link:hover {
+      background-color: yellowgreen;
+      color: #000;
+    }
 
+    .text-bizlift {
+      color: #c6ff00;
+    }
 
-
-
-
-
+    .text-insta {
+      color: #d63384;
+    }
   </style>
 </head>
 <body>
+
+  <!-- Header / Topbar -->
   <header>
     <div class="topbar">
       <div class="logo"> BizLift</div>
@@ -172,142 +164,131 @@ nav ul {
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
 
-          <!-- ✅ Services Dropdown -->
+          <!-- Services Dropdown -->
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button">
-              Services
-            </a>
+            <a class="nav-link dropdown-toggle" href="#" role="button">Services</a>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="sub_service.html">Service</a></li>
               <li><a class="dropdown-item" href="service_details.html">Details</a></li>
-
             </ul>
           </li>
 
           <li class="nav-item"><a class="nav-link" href="pages.html">Pages</a></li>
 
-          <!-- ✅ Blog Dropdown -->
+          <!-- Blog Dropdown -->
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button">
-              Blog
-            </a>
+            <a class="nav-link dropdown-toggle" href="#" role="button">Blog</a>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="blog_grid.html">Blog Grid</a></li>
-              <li><a class="dropdown-item" href="blog_details.html">Blog Details</a></li>
             </ul>
           </li>
 
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
         </ul>
       </nav>
-      
     </div>
   </header>
 
-  <section class="hero">
-    <div class="hero-text">
-      <h1>Nurturing of ideas</h1>
-     <p>
-  <span class="home-icon">🏠</span> 
-  <a href="index.html" class="breadcrumb-home">Home</a> &nbsp; › &nbsp; Service
-</p>
-    </div>
-    <div class="hero-image">
-      <img src="images/ser1.jpg" alt="Business Illustration" />
-    </div>
-  </section>
+  <!-- Main content starts -->
+  <main>
 
-  <!-- Add this just below the <section class="hero"> ... </section> block -->
-
-<section style="background-color: #000; padding: 60px 40px;">
-  <div class="row g-5">
-    <!-- Left side image and details -->
-    <div class="col-md-8">
-      <div class="card bg-dark text-white border-0">
-        <img src="images/ser4.webp" class="card-img-top rounded" alt="Client Image">
-        <div class="card-body mt-3">
-          <div class="d-flex justify-content-between bg-success p-3 rounded">
-            <div><strong>Catagory</strong><br>Business's Consulting</div>
-            <div><strong>Clients</strong><br>Fahad Hossain</div>
-            <div><strong>Timeframe</strong><br>February-10-2024</div>
-          </div>
-        </div>
-      </div>
-      <div class="mt-4">
-        <h2 class="fw-bold">Maximizing Profita Through</h2>
-        <p style="color:white;">
-          Web designing in a powerful way of just not an only professions, however, in a passion Company.
-          have a to a tendency to believe the idea that smart looking of any website is the impression on visitors. 
-          Web designing in a powerful way only professions Web designing in a powerf.
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Nurturing of ideas</h1>
+        <p>
+          <span class="home-icon">🏠</span> 
+          <a href="index.html" class="breadcrumb-home">Home</a> &nbsp; › &nbsp; Service
         </p>
-         <ul class="list-unstyled mt-3">
-          <li class="mb-2"><i class="fa-solid fa-circle-check text-success me-2"></i> Navigate the Path to Success Achieve Your</li>
-          <li class="mb-2"><i class="fa-solid fa-circle-check text-success me-2"></i> A business consultant is a professional who provides expert</li>
-          <li class="mb-2"><i class="fa-solid fa-circle-check text-success me-2"></i> Guidance to businesses on various aspects such as management</li>
-        </ul>
       </div>
+      <div class="hero-image">
+        <img src="images/ser1.jpg" alt="Business Illustration" />
+      </div>
+    </section>
 
-      <div class="mt-5">
-  <h2 class="fw-bold">Navigate The Path To Success</h2>
-  <p style="color:white;">
-    In today’s digital era, a professionally designed website is more than just an online presence — it's a gateway to success. 
-    An impactful website builds trust, attracts the right audience, and clearly communicates your brand’s vision. 
-    By combining creativity with strategy, web design helps businesses grow, engage customers, and stand out in a competitive market.
-  </p>
+    <!-- Service Section -->
+    <section style="background-color: #000; padding: 60px 40px;">
+      <div class="row g-5">
 
-
-         <div class="row mt-4">
-          <div class="col-md-6">
-            <img src="images/ser5.avif" alt="Team Image 1" class="img-fluid rounded">
+        <!-- Left Side -->
+        <div class="col-md-8">
+          <div class="card bg-dark text-white border-0">
+            <img src="images/ser4.webp" class="card-img-top rounded" alt="Client Image">
+            <div class="card-body mt-3">
+              <div class="d-flex justify-content-between bg-success p-3 rounded">
+                <div><strong>Category</strong><br>Business Consulting</div>
+                <div><strong>Clients</strong><br>Fahad Hossain</div>
+                <div><strong>Timeframe</strong><br>February-10-2024</div>
+              </div>
+            </div>
           </div>
-          <div class="col-md-6">
-            <img src="images/ser7.jpg" alt="Team Image 2" class="img-fluid rounded">
+
+          <div class="mt-4">
+            <h2 class="fw-bold">Maximizing Profits Through</h2>
+            <p>
+              Web designing is a powerful way of not just a profession, but a passion.  
+              Smart-looking websites create strong impressions. With a strategic approach, 
+              web design becomes a growth engine for businesses.
+            </p>
+            <ul class="list-unstyled mt-3">
+              <li class="mb-2"><i class="fa-solid fa-circle-check text-success me-2"></i> Navigate the Path to Success Achieve Your</li>
+              <li class="mb-2"><i class="fa-solid fa-circle-check text-success me-2"></i> A business consultant is a professional who provides expert</li>
+              <li class="mb-2"><i class="fa-solid fa-circle-check text-success me-2"></i> Guidance to businesses on various aspects such as management</li>
+            </ul>
+          </div>
+
+          <div class="mt-5">
+            <h2 class="fw-bold">Navigate The Path To Success</h2>
+            <p>
+              In today’s digital era, a professionally designed website is more than just an online presence — it's a gateway to success. 
+              An impactful website builds trust, attracts the right audience, and clearly communicates your brand’s vision. 
+              By combining creativity with strategy, web design helps businesses grow, engage customers, and stand out in a competitive market.
+            </p>
+
+            <div class="row mt-4">
+              <div class="col-md-6">
+                <img src="images/ser5.avif" alt="Team Image 1" class="img-fluid rounded">
+              </div>
+              <div class="col-md-6">
+                <img src="images/ser7.jpg" alt="Team Image 2" class="img-fluid rounded">
+              </div>
+            </div>
           </div>
         </div>
+
+        <!-- Right Side Service List -->
+        <div class="col-md-4"> 
+          <div style="background-color: #1c3b2f; padding: 20px; border-radius: 15px;">
+            <h4 class="mb-4">Our Services</h4>
+            <ul class="list-unstyled">
+              <li><a href="#" class="service-link d-block p-3 mb-2 rounded">Business service</a></li>
+              <li><a href="#" class="service-link d-block p-3 mb-2 rounded">Car service</a></li>
+              <li><a href="#" class="service-link d-block p-3 mb-2 rounded">Others service</a></li>
+              <li><a href="#" class="service-link d-block p-3 mb-2 rounded">Personal service</a></li>
+              <li><a href="#" class="service-link d-block p-3 mb-2 rounded">Student service</a></li>
+              <li><a href="#" class="service-link d-block p-3 mb-2 rounded">Wedding service</a></li>
+            </ul>
+          </div>
+        </div>
+
       </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="text-center bg-dark py-4">
+    <p class="text-white mb-2">
+      © 2025 <span class="text-bizlift">BizLift</span> | All Rights Reserved.
+    </p>
+    <div>
+      <a href="https://www.facebook.com/" class="text-white me-3"><i class="bi bi-facebook text-primary fs-3"></i></a>
+      <a href="https://www.instagram.com/" class="text-white me-3"><i class="bi bi-instagram text-insta fs-3"></i></a>
+      <a href="https://twitter.com/" class="text-white"><i class="bi bi-twitter text-primary fs-3"></i></a>
     </div>
+  </footer>
 
-      
-
-
-      <!-- Right side service list -->
-    <div class="col-md-4"> 
-      <div style="background-color: #1c3b2f; padding: 20px; border-radius: 15px;">
-        <h4 class="mb-4">Our Services</h4>
-        <ul class="list-unstyled">
-          <li><a href="#" class="service-link d-block p-3 mb-2 rounded">Business service</a></li>
-          <li><a href="#" class="service-link d-block p-3 mb-2 rounded">Car service</a></li>
-          <li><a href="#" class="service-link d-block p-3 mb-2 rounded">Others service</a></li>
-          <li><a href="#" class="service-link d-block p-3 mb-2 rounded">Personal service</a></li>
-          <li><a href="#" class="service-link d-block p-3 mb-2 rounded">Student service</a></li>
-          <li><a href="#" class="service-link d-block p-3 mb-2 rounded">Wedding service</a></li>
-        </ul>
-      </div>
-    </div>
-
-   <!-- Footer Start -->
-    <footer class="text-center bg-dark">
-      <p class="text-white">
-        © 2025 <span class="text-bizlift">BizLift</span> | All Rights Reserved.
-      </p>
-      <div>
-        <a href="https://www.facebook.com/" class="text-white me-3"><i class="bi bi-facebook text-primary fs-3"></i></a>
-        <a href="https://www.instagram.com/" class="text-white me-3"><i class="bi bi-instagram text-insta fs-3"></i></a>
-        <a href="https://twitter.com/" class="text-white"><i class="bi bi-twitter text-primary fs-3"></i></a>
-      </div>
-    </footer>
-    <!-- Footer End -->
-
- 
-
-
-
-    
-
-
-
-
-
- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
