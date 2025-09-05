@@ -1,12 +1,422 @@
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Service - BizLift</title>
+  
+
+  <!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Font Awesome (Latest) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
+
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #111;
+      color: #fff;
+    }
+
+    .navbar .nav-link:hover {
+      color: rgb(94, 232, 94);
+    }
+
+    .topbar {
+      background-color: #000;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 40px;
+    }
+
+    .logo {
+      color: #c5ff3f;
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin: 0;
+    }
+
+    nav ul li {
+      position: relative;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .icons a {
+      margin-left: 10px;
+      color: #fff;
+    }
+
+    .hero {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 60px 40px;
+      background-color: #1a1a1a;
+    }
+
+    .hero-text h1 {
+      font-size: 48px;
+      margin: 0;
+    }
+
+    .hero-text p {
+      margin-top: 10px;
+      color: #ccc;
+    }
+
+    .hero-image img {
+      width: 300px;
+    }
+
+    .latest-service {
+      background-color: #000;
+      text-align: center;
+      padding: 20px;
+      color: #c5ff3f;
+      font-weight: bold;
+    }
+
+    nav ul li a.nav-link {
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a.nav-link:hover {
+      color: rgb(94, 232, 94);
+    }
+
+  
+   /* Dropdown container */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;         /* Dropdown background */
+  display: none;
+  padding: 8px 0;
+  min-width: 180px;
+  border: 1px solid #ddd;          /* Optional border for clarity */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Soft shadow */
+  z-index: 999;
+}
+
+/* List item padding */
+.dropdown-menu li {
+  padding: 0;  /* Removed padding here to control it on anchor tag */
+}
+
+/* Dropdown links */
+.dropdown-menu li a {
+  color: black;                    /* Text color */
+  background-color: white;        /* Background */
+  text-decoration: none;
+  padding: 10px 20px;
+  display: block;
+  font-weight: 500;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect */
+.dropdown-menu li a:hover {
+  background-color: #333;
+  color: #c5ff3f;
+}
+
+/* Show menu on hover */
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+}
+.breadcrumb-home {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.breadcrumb-home:hover {
+  color: #5ee85e; /* or use #c5ff3f for consistency */
+}
+
+/* section 2*/
+.bg-lime {
+  background-color: #c5ff3f;
+}
+.text-lime {
+  color: #c5ff3f;
+}
+/*video section*/ 
+.video-hero-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.video-hero-section img {
+  object-fit: cover;
+  height: 100%;
+}
+
+.play-btn {
+  background-color: #c5ff3f;
+  padding: 20px 30px;
+  font-size: 18px;
+  border-radius: 50px;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+.play-btn:hover {
+  background-color: #aee636;
+  color: black;
+}
+
+.text-bizlift {
+        color: #c6ff00;
+      }
+      .text-insta {
+        color: deeppink;
+      }
+
+
+
+
+</style>
+</head>
+<body>
+  <header>
+    <div class="topbar">
+      <a>
+          <img src="images/logo.jpg" alt="BizLift Logo" width="30" height="24" />
+          <span class="logo">BizLift</span>
+      </a>
+      <nav>
+        <ul>
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+
+          <!-- Services Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button">
+              Services
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="sub_service.html">Service</a></li>
+              <li><a class="dropdown-item" href="service_details.html">Details</a></li>
+
+            </ul>
+          </li>
+
+          <li class="nav-item"><a class="nav-link" href="pages.html">Pages</a></li>
+
+          <!-- Blog Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button">
+              Blog
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="blog_grid.html">Blog Grid</a></li>
+              
+            </ul>
+          </li>
+
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+      
+    </div>
+  </header>
+
   <section class="hero">
     <div class="hero-text">
-      <h1>Contact us</h1>
+      <h1>About Us</h1>
      <p>
   <span class="home-icon">🏠</span> 
-  <a href="index.html" class="breadcrumb-home">Home</a> &nbsp; › &nbsp; contact us
+  <a href="index.html" class="breadcrumb-home">Home</a> &nbsp; › &nbsp; About Us
 </p>
     </div>
     <div class="hero-image">
       <img src="images/ser1.jpg" alt="Business Illustration" />
     </div>
   </section>
+
+
+
+  <!-- About Us Section -->
+<!-- About Us Section -->
+<section class="about-section d-flex flex-wrap justify-content-center align-items-center py-5 px-4" style="background-color: #000;">
+  
+  <!-- Left side image container -->
+  <div class="position-relative me-5 mb-4" style="min-width: 450px; max-width: 450px;">
+    
+    <!-- Main business image -->
+    <img src="images/ab3.avif" alt="Business" class="img-fluid rounded shadow" style="width: 100%; height: auto; position: relative; z-index: 2;" />
+    
+    <!-- Highlight box showing years experience -->
+    <div class="position-absolute bg-lime text-dark d-flex flex-column align-items-center justify-content-center shadow"
+      style="width: 140px; height: 140px; border-radius: 10px; bottom: -20px; left: -30px; border: 2px dashed black; z-index: 3;">
+      <h2 class="fw-bold mb-0" style="font-size: 2.5rem;">20</h2>
+      <p class="mb-0" style="font-size: 0.9rem;">Years Experience</p>
+    </div>
+  </div>
+
+  <!-- Right side text content -->
+  <div class="text-white" style="max-width: 500px;">
+    
+    <small class="text-lime fw-semibold d-block mb-2">About Us</small>
+    
+    <h1 class="display-6 fw-bold mb-4">Achieve Your Business Goals</h1>
+    
+    <p class="mb-4" style="color: #ccc;">
+      At BizLift, we help businesses overcome challenges and unlock their full potential through expert consulting and innovative strategies. With over 20 years of experience, we guide startups and enterprises alike toward sustainable growth.
+    </p>
+
+    <!-- Vision and Mission -->
+    <p class="mb-4" style="color: #ccc; font-style: italic;">
+      <strong>Our Vision:</strong> To empower businesses to reach new heights through trusted guidance and innovation.<br />
+      <strong>Our Mission:</strong> To provide personalized consulting that drives sustainable growth and long-term success.
+    </p>
+    
+    <ul class="list-unstyled mb-4" style="color: #c5ff3f;">
+      <li class="d-flex align-items-center mb-2"><i class="bi bi-check-circle-fill me-2"></i> Mistakes to avoid in dummy printing.</li>
+      <li class="d-flex align-items-center mb-2"><i class="bi bi-check-circle-fill me-2"></i> Helping you build sustainable growth strategies.</li>
+      <li class="d-flex align-items-center"><i class="bi bi-check-circle-fill me-2"></i> Committed to your long-term success.</li>
+    </ul>
+    
+    <p class="fw-bold mb-4">
+      Porttitor ornare fermentum aliquam pharetra ut facilisis gravida risus suscipit.
+    </p>
+
+    <!-- Call To Action Button -->
+    <a href="contact.html" class="btn btn-lime text-dark fw-bold px-4 py-2" style="background-color: #aee636; border-radius: 30px; text-decoration: none;">
+      Get a Free Consultation
+    </a>
+
+  </div>
+</section>
+
+
+<!--video start-->
+
+<section class="video-hero-section position-relative text-center">
+  <!-- Background Image -->
+  <img src="images/v4.jpg" alt="Video Preview" class="w-100 h-100 object-fit-cover position-absolute top-0 start-0 z-n1">
+
+  <!-- Overlay (dark transparent layer) -->
+  <div class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(0,0,0,0.4); z-index: 0;"></div>
+
+  <!-- Content in center -->
+  <div class="d-flex flex-column justify-content-center align-items-center position-relative py-5" style="min-height: 450px;">
+    <h2 class="text-white fw-bold mb-4 fs-1">Watch How We Empower Businesses</h2>
+
+    <!-- Play Button -->
+    <a href="https://www.youtube.com/watch?v=dJQn4DqzMVQ" target="_blank"
+       class="play-btn d-flex justify-content-center align-items-center text-black fw-bold text-decoration-none">
+      <i class="fas fa-play me-2"></i> Play Video
+    </a>
+  </div>
+</section>
+<!--video end -->
+
+
+
+<!-- Our Team Section Start -->
+<section class="py-5" style="background-color: #111;">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="text-lime fw-bold">Our Team</h2>
+      <p class="text-white">Meet our experienced and professional team members who are here to help you succeed.</p>
+
+    </div>
+    <div class="row g-4">
+
+      <!-- Team Member 1 -->
+      <div class="col-md-6 col-lg-3">
+        <div class="card bg-dark text-white border-0 h-100 shadow">
+          <img src="images/team2.avif" class="card-img-top" alt="Team Member 1">
+          <div class="card-body text-center">
+            <h5 class="card-title text-lime">Rahul Jadhav</h5>
+            <p class="card-text">Founder & Business Strategist</p>
+            <small class="text-secondary">15+ years experience in business development, startup mentoring, and leadership.</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- Team Member 2 -->
+      <div class="col-md-6 col-lg-3">
+        <div class="card bg-dark text-white border-0 h-100 shadow">
+          <img src="images/team1.avif" class="card-img-top" alt="Team Member 2">
+          <div class="card-body text-center">
+            <h5 class="card-title text-lime">Sarve Palli</h5>
+            <p class="card-text">Marketing Head</p>
+            <small class="text-secondary">Expert in digital marketing, branding, and customer engagement strategies.</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- Team Member 3 -->
+      <div class="col-md-6 col-lg-3">
+        <div class="card bg-dark text-white border-0 h-100 shadow">
+          <img src="images/team 3.webp" class="card-img-top" alt="Team Member 3">
+          <div class="card-body text-center">
+            <h5 class="card-title text-lime">Amit More</h5>
+            <p class="card-text">Finance Consultant</p>
+            <small class="text-secondary">CA with 10+ years of the experience in business finance, auditing, and cost planning.</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- Team Member 4 -->
+      <div class="col-md-6 col-lg-3">
+        <div class="card bg-dark text-white border-0 h-100 shadow">
+          <img src="images/team4.webp" class="card-img-top" alt="Team Member 4">
+          <div class="card-body text-center">
+            <h5 class="card-title text-lime">Aina </h5>
+            <p class="card-text">Startup Coach</p>
+            <small class="text-secondary">Guides early-stage entrepreneurs with business models, pitch decks, and growth plans.</small>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- Our Team Section End -->
+
+
+<!-- Footer Start -->
+    <footer class="text-center bg-dark">
+      <p class="text-white">
+        © 2025 <span class="text-bizlift">BizLift</span> | All Rights Reserved.
+      </p>
+      <div>
+        <a href="https://www.facebook.com/" class="text-white me-3"><i class="bi bi-facebook text-primary fs-3"></i></a>
+        <a href="https://www.instagram.com/" class="text-white me-3"><i class="bi bi-instagram text-insta fs-3"></i></a>
+        <a href="https://twitter.com/" class="text-white"><i class="bi bi-twitter text-primary fs-3"></i></a>
+      </div>
+    </footer>
+    <!-- Footer End -->
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

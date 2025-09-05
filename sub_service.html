@@ -14,6 +14,10 @@
 <!-- Font Awesome (Latest) -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+
   <style>
     body {
       margin: 0;
@@ -37,7 +41,7 @@
     .logo {
       color: #c5ff3f;
       font-weight: bold;
-      font-size: 24px;
+      font-size: 20px;
     }
 
     nav ul {
@@ -201,15 +205,53 @@
 }
 
 
+/* carde section  button hover*/
+
+.btn-outline-light {
+  border-color: white;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-light:hover,
+.btn-outline-light:focus,
+.btn-outline-light:active {
+  background-color: #c5ff3f; /* Yellow-green */
+  color: black; /* For contrast */
+  border-color: #c5ff3f;
+}
 
 
-  </style>
+/* popup window */
+.modal-header h5.modal-title {
+  width: 100%;
+  text-align: center;
+
+}
+.modal-body ul li::marker {
+  color: #c5ff3f;
+}
+/*  footer */
+.text-bizlift {
+        color: #c6ff00;
+      }
+      .text-insta {
+        color: #d63384;
+      }
+
+
+
+
+
+</style>
 </head>
 <body>
   <header>
     <div class="topbar">
-      <div class="logo"> BizLift</div>
-      <nav>
+      <a>
+          <img src="images/logo.jpg" alt="BizLift Logo" width="30" height="24" />
+          <span class="logo">BizLift</span>
+      </a>      <nav>
         <ul>
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
@@ -235,7 +277,7 @@
             </a>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="blog_grid.html">Blog Grid</a></li>
-              <li><a class="dropdown-item" href="blog_details.html">Blog Details</a></li>
+              
             </ul>
           </li>
 
@@ -265,51 +307,219 @@
 
  
 
-     <!-- New Service Cards Section -->
+
+<!-- Service Cards Section -->
 <section class="service-cards">
   <h2>Empowering Your Business Growth</h2>
   <div class="cards-container">
+    
+    <!-- Card 1 -->
     <div class="service-card">
       <div class="icon-circle">💼</div>
       <h3>Investment Advisory</h3>
-      <p>We approached WiaTech with complex project deliver</p>
-       <a href="service_details.html" style="font-weight: bold; color: white; text-decoration: none;">Read More →</a>
-     </div>
-
-    <div class="service-card">
-      <div class="icon-circle">📊</div>
-      <h3>Brand  Strategy</h3>
-      <p>We approached WiaTech with complex project deliver</p>
-          <a href="service_details.html" style="font-weight: bold; color: white; text-decoration: none;">Read More →</a>
+      <p>Expert advice to grow wealth with smart and secure investments.
+</p>
+      <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#modal1">
+        Read More →
+      </button>
     </div>
 
+    <!-- Card 2 -->
+    <div class="service-card">
+      <div class="icon-circle">📊</div>
+      <h3>Brand Strategy</h3>
+      <p>Strategic branding to build trust and market impact.
+        
+        We use insights to build trust and lasting brand value.
+      </p>
+      <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#modal2">
+        Read More →
+      </button>
+    </div>
+
+    <!-- Card 3 -->
     <div class="service-card">
       <div class="icon-circle">📈</div>
       <h3>Marketing Strategy</h3>
-      <p>We approached WiaTech with complex project deliver</p>
-    <a href="service_details.html" style="font-weight: bold; color: white; text-decoration: none;">Read More →</a>
+      <p></p>Targeted and personalized marketing to reach the right audience effectively.
+      <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#modal3">
+        Read More →
+      </button>
     </div>
 
+    <!-- Card 4 -->
     <div class="service-card">
       <div class="icon-circle">🚀</div>
       <h3>Startup Guidance</h3>
-      <p>We approached WiaTech with complex project deliver</p>
-   <a href="service_details.html" style="font-weight: bold; color: white; text-decoration: none;">Read More →</a>
+      <p>Step-by-step support to launch and scale your startup.</p>
+      <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#modal4">
+        Read More →
+      </button>
     </div>
+
+    <!-- Card 5 -->
     <div class="service-card">
       <div class="icon-circle">💰</div>
       <h3>Financial Planning</h3>
-      <p>We approached WiaTech with complex project deliver</p>
-    <a href="service_details.html" style="font-weight: bold; color: white; text-decoration: none;">Read More →</a>
+      <p>Plan your finances smartly for a secure and successful future.</p>
+      <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#modal5">
+        Read More →
+      </button>
     </div>
+
+    <!-- Card 6 -->
     <div class="service-card">
       <div class="icon-circle">📞</div>
       <h3>Customer Service</h3>
-      <p>We approached WiaTech with complex project deliver</p>
-           <a href="service_details.html" style="font-weight: bold; color: white; text-decoration: none;">Read More →</a>
+      <p>Enhance client satisfaction with responsive, quality support.</p>
+      <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#modal6">
+        Read More →
+      </button>
     </div>
+
   </div>
 </section>
+
+<!-- Modals -->
+
+<!-- Modal 1 -->
+<div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="modal1Label" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content bg-dark text-white">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modal1Label">Investment Advisory</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body d-flex gap-4 flex-wrap">
+        <img src="images/pop1.webp" alt="Investment Advisory" style="width: 300px; border-radius: 10px;">
+        <div>
+          <p>Our investment advisory service offers tailored financial strategies that help maximize your returns while minimizing risk. We analyze market trends and guide you every step of the way. By leveraging our extensive expertise and advanced analytics, we ensure your portfolio adapts dynamically to changing economic conditions, helping you build sustainable wealth for the future.</p>
+          <ul>
+            <li>Personalized portfolio management</li>
+            <li>Risk assessment</li>
+            <li>Market insights</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 2 -->
+<div class="modal fade" id="modal2" tabindex="-1" aria-labelledby="modal2Label" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content bg-dark text-white">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modal2Label">Brand Strategy</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body d-flex gap-4 flex-wrap">
+        <img src="images/pop2.jpg" alt="Brand Strategy" style="width: 300px; border-radius: 10px;">
+        <div>
+          <p>We help build and strengthen your brand identity, ensuring your message resonates with the target audience and stands out in the market. Our comprehensive approach includes research-driven insights and creative storytelling to position your brand effectively and foster long-term loyalty among customers, partners, and stakeholders.</p>
+          <ul>
+            <li>Market positioning</li>
+            <li>Competitive analysis</li>
+            <li>Brand messaging</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 3 -->
+<div class="modal fade" id="modal3" tabindex="-1" aria-labelledby="modal3Label" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content bg-dark text-white">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modal3Label">Marketing Strategy</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body d-flex gap-4 flex-wrap">
+        <img src="images/pop3.png" alt="Marketing Strategy" style="width: 300px; border-radius: 10px;">
+        <div>
+          <p>Our marketing strategy service helps you reach your ideal customers through innovative campaigns and data-driven decisions. We focus on crafting compelling messages and leveraging multi-channel marketing techniques to boost engagement, increase conversions, and build lasting brand awareness.</p>
+          <ul>
+            <li>Campaign development</li>
+            <li>Digital marketing</li>
+            <li>Analytics & reporting</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 4 -->
+<div class="modal fade" id="modal4" tabindex="-1" aria-labelledby="modal4Label" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content bg-dark text-white">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modal4Label">Startup Guidance</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body d-flex gap-4 flex-wrap">
+        <img src="images/pop5.avif" alt="Startup Guidance" style="width: 300px; border-radius: 10px;">
+        <div>
+          <p>We provide expert advice and mentorship to help startups navigate challenges and accelerate growth. From initial business planning to securing funding and executing growth hacking strategies, our support is designed to empower entrepreneurs at every stage of their journey and help them achieve scalable success.</p>
+          <ul>
+            <li>Business planning</li>
+            <li>Funding assistance</li>
+            <li>Growth hacking</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 5 -->
+<div class="modal fade" id="modal5" tabindex="-1" aria-labelledby="modal5Label" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content bg-dark text-white">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modal5Label">Financial Planning</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body d-flex gap-4 flex-wrap">
+        <img src="images/pop6.jpg" alt="Financial Planning" style="width: 300px; border-radius: 10px;">
+        <div>
+          <p>Comprehensive financial planning services to help you manage your wealth effectively and secure your future. Our experts assist with budgeting, forecasting, tax optimization, and retirement planning to ensure that your financial goals are met with confidence and clarity throughout your life.</p>
+          <ul>
+            <li>Budgeting & forecasting</li>
+            <li>Tax optimization</li>
+            <li>Retirement planning</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 6 -->
+<div class="modal fade" id="modal6" tabindex="-1" aria-labelledby="modal6Label" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content bg-dark text-white">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modal6Label">Customer Service</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body d-flex gap-4 flex-wrap">
+        <img src="images/pop7.avif" alt="Customer Service" style="width: 300px; border-radius: 10px;">
+        <div>
+          <p>Our customer service solutions focus on enhancing client satisfaction and loyalty through personalized support. We offer 24/7 assistance, comprehensive feedback management, and ongoing training & development programs to ensure your team delivers exceptional service consistently.</p>
+          <ul>
+            <li>24/7 support</li>
+            <li>Feedback management</li>
+            <li>Training & development</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!--card section endddd-->
 
 <section style="background-color: #000; color: #fff; padding: 50px;">
@@ -319,7 +529,7 @@
     <div style="flex: 1 1 50%; padding: 20px;">
       <h2>Achieve Your Business Goals</h2>
       <p>
-        We have been operating for over a decade, providing top-notch services to our clients 
+        We have been operating for over a decade, providing the top-notch services to our clients 
         and building a strong track record in the industry. Here's how we help:
       </p>
 
@@ -381,12 +591,21 @@
     </div>
   </div>
 </section>
+    
 
+<!-- Footer Start -->
+    <footer class="text-center bg-dark">
+      <p class="text-white">
+        © 2025 <span class="text-bizlift">BizLift</span> | All Rights Reserved.
+      </p>
+      <div>
+        <a href="https://www.facebook.com/" class="text-white me-3"><i class="bi bi-facebook text-primary fs-3"></i></a>
+        <a href="https://www.instagram.com/" class="text-white me-3"><i class="bi bi-instagram text-insta fs-3"></i></a>
+        <a href="https://twitter.com/" class="text-white"><i class="bi bi-twitter text-primary fs-3"></i></a>
+      </div>
+    </footer>
+    <!-- Footer End -->
 
-
-
-
-
- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
