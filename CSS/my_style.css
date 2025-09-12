@@ -1,5 +1,4 @@
-
-      /* Full-screen hero image */
+/* Full-screen hero image */
       .custom-img,.carousel-item img {
         width:100%;
         height:70vh;
@@ -199,7 +198,7 @@
 
 /* Video Iframe */
 .video-frame {
-  width: 450px;
+  width: 410px;
   height: 255px;
   border: none; /* remove default frame border */
   border-radius: 1rem; /* optional rounded corners like features */
@@ -295,6 +294,7 @@ ul.list-unstyled li span.float-end {
 .card-title {
   transition: color 0.3s ease, transform 0.3s ease;
   cursor: pointer;
+  font-size: 15px;
 }
 
 .card-title:hover {
