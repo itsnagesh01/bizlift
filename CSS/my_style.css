@@ -328,3 +328,39 @@ ul.list-unstyled li span.float-end {
   opacity: 1;
   transform: translateX(5px);
 }
+.footer-link {
+    color: #ddd;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 8px;
+    transition: 0.3s;
+  }
+  .footer-link:hover {
+    color: #9ef01a;
+    padding-left: 5px;
+  }
+  .social-icon {
+    font-size: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 50%;
+    transition: 0.3s;
+  }
+  .social-icon:hover {
+    background: #9ef01a;
+    color: #000 !important;
+  }
+  footer input {
+    border: none;
+    padding: 10px;
+  }
+  footer .btn-success {
+    background: #9ef01a;
+    border: none;
+    color: #000;
+    font-weight: bold;
+    padding: 10px 15px;
+  }
+  footer .btn-success:hover {
+    background: #7bd314;
+  }
