@@ -188,24 +188,111 @@
   background-color: #aee636;
   color: black;
 }
+/*footer style*/
 
-.text-bizlift {
-        color: #c6ff00;
-      }
-      .text-insta {
-        color: deeppink;
-      }
+  /* Footer background with dark overlay and image */
+  .footer {
+    background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
+                url("images/IT.jpeg");
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+  }
 
+  /* Remove underline from all links inside footer */
+  .footer a {
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
 
+  /* General link hover color */
+  .footer a:hover {
+    color: #a4ffaf;
+    text-decoration: none;
+  }
 
+  /* Useful Links - normal white, hover yellowgreen, no underline */
+  .footer ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
 
+  .footer ul li a:hover {
+    color: yellowgreen;
+    text-decoration: none;
+  }
+
+  /* Social Icon Styling */
+  .social-icons a {
+    font-size: 18px;
+    transition: color 0.3s ease;
+  }
+
+  /* Facebook Color */
+  .text-facebook {
+    color: #1877F2;
+  }
+  .text-facebook:hover {
+    color: #0d65d9;
+  }
+
+  /* Twitter Color */
+  .text-twitter {
+    color: #1DA1F2;
+  }
+  .text-twitter:hover {
+    color: #0d8ddb;
+  }
+
+  /* Instagram Color - Deep Pink */
+  .text-instagram {
+    color: #FF1493;
+  }
+  .text-instagram:hover {
+    color: #e01383;
+  }
+
+  /* Newsletter input style */
+  form input[type="email"] {
+    background-color: #1c2b3a;
+    color: #fff;
+    border: 1px solid #3c4c5e;
+  }
+
+  form input[type="email"]::placeholder {
+    color: #ccc;
+  }
+
+  /* Yellowgreen button */
+  .btn-yellowgreen {
+    background-color: #9ACD32;
+    color: white;
+    border: none;
+  }
+
+  .btn-yellowgreen:hover {
+    background-color: #85b82c;
+    color: white;
+  }
+
+  /* Contact icons in yellowgreen */
+  .icon-yellowgreen {
+    color: #9ACD32;
+  }
 </style>
+
+
+
+
+
+
 </head>
 <body>
   <header>
     <div class="topbar">
       <a>
-          <img src="images/logo.jpg" alt="BizLift Logo" width="30" height="24" />
+          <img src="images/logo1.jpg" alt="BizLift Logo" width="30" height="24" />
           <span class="logo">BizLift</span>
       </a>
       <nav>
@@ -404,16 +491,68 @@
 
 
 <!-- Footer Start -->
-    <footer class="text-center bg-dark">
-      <p class="text-white">
-        © 2025 <span class="text-bizlift">BizLift</span> | All Rights Reserved.
-      </p>
-      <div>
-        <a href="https://www.facebook.com/" class="text-white me-3"><i class="bi bi-facebook text-primary fs-3"></i></a>
-        <a href="https://www.instagram.com/" class="text-white me-3"><i class="bi bi-instagram text-insta fs-3"></i></a>
-        <a href="https://twitter.com/" class="text-white"><i class="bi bi-twitter text-primary fs-3"></i></a>
+  
+<footer class="footer text-light">
+  <div class="container py-5">
+    <div class="row">
+
+      <!-- Logo & Description -->
+      <div class="col-md-3 mb-4">
+        <h4 class="text-uppercase mb-3 d-flex align-items-center" style="color: #ccff00;">
+          <img src="images/logo1.jpg" alt="BizLift Logo" style="height: 30px; margin-right: 10px;">
+          BizLift
+        </h4>
+        <p>Empowering your business with smart solutions & growth strategies.</p>
+        <div class="social-icons mt-3">
+          <a href="https://www.facebook.com/YourPage" target="_blank" class="text-facebook me-3">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://www.instagram.com/YourProfile" target="_blank" class="text-instagram me-3">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://twitter.com/YourProfile" target="_blank" class="text-twitter">
+            <i class="fab fa-twitter"></i>
+          </a>
+        </div>
       </div>
-    </footer>
+
+      <!-- Useful Links -->
+      <div class="col-md-3 mb-4">
+        <h5 class="mb-3">Useful Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="index.html">> Home</a></li>
+          <li><a href="about.html">> About</a></li>
+          <li><a href="sub_service.html">> Services</a></li>
+          <li><a href="page.html">> Page</a></li>
+          <li><a href="blog_grid.html">> Blog</a></li>
+          <li><a href="contact.html">> Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="col-md-3 mb-4">
+        <h5 class="mb-3">Contact</h5>
+        <p><i class="fas fa-phone-alt me-2 icon-yellowgreen"></i>(+888) 123 456 765</p>
+        <p><i class="fas fa-envelope me-2 icon-yellowgreen"></i>support@bizlift.com</p>
+        <p><i class="fas fa-map-marker-alt me-2 icon-yellowgreen"></i>Pune, Maharashtra, India</p>
+      </div>
+
+      <!-- Newsletter -->
+      <div class="col-md-3 mb-4">
+        <h5 class="mb-3">Newsletter</h5>
+        <p>Subscribe to our newsletter to get the latest updates & news.</p>
+        <form class="d-flex">
+          <input type="email" class="form-control me-2" placeholder="Email Address" required />
+          <button type="submit" class="btn btn-yellowgreen">
+            <i class="fas fa-paper-plane"></i>
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</footer>
+
     <!-- Footer End -->
 
 
