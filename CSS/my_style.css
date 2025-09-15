@@ -283,7 +283,9 @@
   opacity: 1;
   transform: translateX(5px);
 }
- /* Remove underline from all links inside footer */
+ 
+
+  /* Remove underline from all links inside footer */
   .footer a {
     text-decoration: none;
     transition: color 0.3s ease;
@@ -350,7 +352,7 @@
 
   /* Yellowgreen button */
   .btn-yellowgreen {
-    background-color: #9ACD32;
+    background-color: #9ACD32 !important;
     color: white;
     border: none;
   }
