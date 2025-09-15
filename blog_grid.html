@@ -14,8 +14,18 @@
 
   <!-- Bootstrap Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
+  <style>
+     /* Footer background with dark overlay and image */
+  .footer {
+    background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
+                url("images/IT.jpeg");
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+  }
+  </style>
 </head>
-<body oncontextmenu="return false" onselectstart="return false">
+<body>
 
   <!-- Navbar Start -->
   <nav class="navbar navbar-expand-lg navbar-dark">
@@ -186,16 +196,67 @@
   <!-- Blog Section End -->
 
   <!-- Footer Start -->
-    <footer class="text-center bg-dark">
-      <p class="text-white">
-        © 2025 <span class="text-bizlift">BizLift</span> | All Rights Reserved.
-      </p>
-      <div>
-        <a href="https://www.facebook.com/" class="text-white me-3"><i class="bi bi-facebook text-primary fs-3"></i></a>
-        <a href="https://www.instagram.com/" class="text-white me-3"><i class="bi bi-instagram text-insta fs-3"></i></a>
-        <a href="https://twitter.com/" class="text-white"><i class="bi bi-twitter text-primary fs-3"></i></a>
+<footer class="footer text-light">
+  <div class="container py-5">
+    <div class="row">
+
+      <!-- Logo & Description -->
+      <div class="col-md-3 mb-4">
+        <h4 class="text-uppercase mb-3 d-flex align-items-center" style="color: #ccff00;">
+          <img src="images/logo1.jpg" alt="BizLift Logo" style="height: 30px; margin-right: 10px;">
+          BizLift
+        </h4>
+        <p>Empowering your business with smart solutions & growth strategies.</p>
+        <div class="social-icons mt-3">
+          <a href="https://www.facebook.com/YourPage" target="_blank" class="text-facebook me-3">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://www.instagram.com/YourProfile" target="_blank" class="text-instagram me-3">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://twitter.com/YourProfile" target="_blank" class="text-twitter">
+            <i class="fab fa-twitter"></i>
+          </a>
+        </div>
       </div>
-    </footer>
+
+      <!-- Useful Links -->
+      <div class="col-md-3 mb-4">
+        <h5 class="mb-3">Useful Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="index.html">> Home</a></li>
+          <li><a href="about.html">> About</a></li>
+          <li><a href="service_details.html">> Services</a></li>
+          <li><a href="page.html">> Page</a></li>
+          <li><a href="blog_grid.html">> Blog</a></li>
+          <li><a href="contact.html">> Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="col-md-3 mb-4">
+        <h5 class="mb-3">Contact</h5>
+        <p><i class="fas fa-phone-alt me-2 icon-yellowgreen"></i>(+888) 123 456 765</p>
+        <p><i class="fas fa-envelope me-2 icon-yellowgreen"></i>support@bizlift.com</p>
+        <p><i class="fas fa-map-marker-alt me-2 icon-yellowgreen"></i>Pune, Maharashtra, India</p>
+      </div>
+
+      <!-- Newsletter -->
+      <div class="col-md-3 mb-4">
+        <h5 class="mb-3">Newsletter</h5>
+        <p>Subscribe to our newsletter to get the latest updates & news.</p>
+        <form class="d-flex">
+          <input type="email" class="form-control me-2" placeholder="Email Address" required />
+          <button type="submit" class="btn btn-yellowgreen">
+            <i class="fas fa-paper-plane"></i>
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</footer>
+<!--footer end-->
     <!-- Footer End -->
 
 
