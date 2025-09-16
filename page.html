@@ -1,286 +1,410 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FAQ Section</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link href="css/my_style.css" rel="stylesheet" type="text/css" />
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>BizLift Project Case Study</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
 
-  <!-- Bootstrap & Icons -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css"> <!-- Optional custom CSS -->
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
 
-  <style>
-    body {
-      background-color: #000;
-      color: #fff;
-    }
+    <!-- Bootstrap Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #0b0b0b;
+        color: white;
+      }
 
-    .navbar {
-      background-color: #000 !important;
-    }
+      .faq-header {
+        background: #101010 url("faq-header.png") no-repeat right center;
+        background-size: contain;
+        padding: 60px 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
 
-    .navbar-brand {
-      color: #A4FF00 !important;
-      font-weight: bold;
-      font-size: 1.25rem;
-    }
+      .faq-header h1 {
+        font-size: 48px;
+        margin: 0;
+      }
 
-    .nav-link,
-    .dropdown-item {
-      color: #fff !important;
-    }
+      .faq-header .breadcrumb {
+        margin-top: 10px;
+        color: #ccc;
+        font-size: 16px;
+      }
 
-    .nav-link:hover,
-    .dropdown-item:hover {
-      color: #A4FF00 !important;
-    }
+      .faq-section {
+        display: flex;
+        justify-content: space-between;
+        padding: 60px 100px;
+        background: #000;
+      }
 
-    /* Updated dropdown styles */
-    .dropdown-menu {
-      background-color: white !important;
-      /* Dropdown background black */
-      border-color: #444 !important;
-    }
+      .faq-left {
+        width: 45%;
+      }
 
-    .dropdown-item {
-      color: black !important;
-      /* Dropdown item text white */
-    }
+      .faq-left h2 {
+        font-size: 40px;
+        margin-bottom: 20px;
+      }
 
-    .dropdown-item:hover,
-    .dropdown-item:focus {
-      background-color: black !important;
-      /* Hover bg color */
-      color: #c6ff00 !important;
-      /* Hover text color */
-    }
+      .faq-left p {
+        color: #bbb;
+        line-height: 1.6;
+        margin-bottom: 20px;
+      }
 
-    .hero-small {
-      height: 45vh;
-      background: url('images/bizlift-banner.jpg') center/cover no-repeat;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #fff;
-      position: relative;
-    }
+      .faq-left button {
+        background: #d4ff46;
+        color: #000;
+        border: none;
+        padding: 12px 25px;
+        font-size: 16px;
+        border-radius: 6px;
+        cursor: pointer;
+        font-weight: bold;
+      }
 
-    .hero-small::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.5);
-    }
+      .faq-right {
+        width: 50%;
+      }
 
-    .hero-small .container {
-      position: relative;
-      z-index: 2;
-      text-align: center;
-    }
+      .faq-item {
+        background: #0f0f0f;
+        margin-bottom: 12px;
+        padding: 15px 20px;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+      .icons a {
+        margin-left: 10px;
+        color: #fff;
+      }
 
-    .section-padding {
-      padding: 48px 0;
-    }
+      .faq-item:hover {
+        background: #1a1a1a;
+      }
 
-    .btn-learn {
-      background-color: #A4FF00;
-      color: #000;
-      font-weight: bold;
-      border: none;
-    }
+      .faq-item h3 {
+        font-size: 18px;
+        color: #d4ff46;
+        margin: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
 
-    .btn-learn:hover {
-      background-color: #99e600;
-    }
+      .faq-item p {
+        margin: 10px 0 0;
+        color: #ccc;
+        display: none;
+      }
 
-    .btn-success {
-      background-color: #228B22;
-      border: none;
-    }
+      .faq-item.active p {
+        display: block;
+      }
 
-    .btn-success:hover {
-      background-color: #1e7c1e;
-    }
+      .faq-item i {
+        transition: transform 0.3s ease;
+      }
 
-    .bg-light {
-      background-color: #222 !important;
-      color: #fff !important;
-    }
+      .faq-item.active i {
+        transform: rotate(180deg);
+      }
+      /* Footer background with dark overlay and image */
+      .footer {
+        background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
+          url("images/IT.jpeg");
+        background-size: cover;
+        background-position: center;
+        color: #ffffff;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container-fluid">
+        <!-- Logo -->
+        <a>
+          <img
+            src="images/logo1.jpg"
+            alt="BizLift Logo"
+            width="30"
+            height="24"
+          />
+          <span class="navbar-brand">BizLift</span>
+        </a>
+        <!-- Navbar toggler -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-    .border {
-      border-color: #444 !important;
-    }
+        <!-- Nav Links -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About Us</a>
+            </li>
 
-    .blockquote-footer {
-      color: #ccc !important;
-    }
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                data-bs-toggle="dropdown"
+                >Services</a
+              >
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="sub_service.html">Service</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="service_details.html"
+                    >Details</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="page.html">Pages</a>
+            </li>
 
-    .text-bizlift {
-      color: #c6ff00;
-    }
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                data-bs-toggle="dropdown"
+                >Blog</a
+              >
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="blog_grid.html">Blog Grid</a>
+                </li>
+              </ul>
+            </li>
 
-    .text-insta {
-      color: #d63384;
-    }
-  </style>
-</head>
-
-<body>
-  <!-- NAVBAR -->
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">
-        <img src="images/logo.jpg" alt="BizLift Logo" width="30" height="24" />
-        <span class="logo">BizLift</span>
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-
-          <!-- Services Dropdown -->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-              Services
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="sub_service.html">Service</a></li>
-              <li><a class="dropdown-item" href="service_details.html">Details</a></li>
-            </ul>
-          </li>
-
-          <li class="nav-item"><a class="nav-link" href="page.html">Pages</a></li>
-
-          <!-- Blog Dropdown -->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-              Blog
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="blog_grid.html">Blog Grid</a></li>
-            </ul>
-          </li>
-
-          <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
-        </ul>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact Us</a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </nav>
+    </nav>
+    <!-- Navbar End -->
 
-  <!-- HERO -->
-  <section class="hero-small">
-    <div class="container">
-      <h1 class="display-6 fw-bold">BizLift — Case Study</h1>
-      <p class="lead">Transforming SMEs with strategy, automation & training.</p>
-    </div>
-  </section>
+    <!-- FAQ HEADER -->
+    <section class="hero">
+      <div class="hero-text">
+        <h1>FAQ</h1>
+      </div>
+    </section>
 
-  <main class="container mt-5 pt-5">
-    <section class="section-padding">
-      <div class="row">
-        <div class="col-md-8">
-          <h2>Project Overview</h2>
+    <!-- FAQ SECTION -->
+    <div class="faq-section">
+      <!-- LEFT SIDE -->
+      <div class="faq-left">
+        <h2>Frequently Asked Questions</h2>
+        <p>
+          Et purus duis sollicitudin dignissim habitant. Egestas nulla quis
+          venenatis cras sed eu massa eu faucibus urna fusce.
+        </p>
+        <a href="service_details.html" target="_blank">
+          <button>Read More</button>
+        </a>
+      </div>
+
+      <!-- RIGHT SIDE -->
+      <div class="faq-right">
+        <div class="faq-item">
+          <h3>
+            How Many Service We Provide? <i class="fa fa-chevron-down"></i>
+          </h3>
           <p>
-            BizLift helped ABC Enterprises scale revenue and reduce costs with a mix of business strategy,
-            automation, and team training. This case study shows what we did and the results.
+            We approached WiaTech with complex project Designing a website can
+            involve various such as layout, graphics, content, and experience.
           </p>
-          <a href="sub_service.html" class="btn btn-learn">Learn More</a>
         </div>
-        <div class="col-md-4">
-          <div class="p-3 bg-light rounded shadow-sm">
-            <h6>Quick Facts</h6>
-            <ul class="list-unstyled mb-0">
-              <li><strong>Client:</strong> ABC Enterprises</li>
-              <li><strong>Duration:</strong> Jan – Jun 2025</li>
-              <li><strong>Services:</strong> Strategy, Tech, Ops</li>
-              <li><strong>Result:</strong> +45% Revenue</li>
+
+        <div class="faq-item">
+          <h3>
+            What Is Insurance Services? <i class="fa fa-chevron-down"></i>
+          </h3>
+          <p>
+            Insurance services provide financial protection against risks and
+            uncertainties in life and business.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3>
+            Why We Are The Best Company? <i class="fa fa-chevron-down"></i>
+          </h3>
+          <p>
+            We offer top-notch services with a strong focus on customer
+            satisfaction and innovation.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3>
+            The Best Company? Why We Are <i class="fa fa-chevron-down"></i>
+          </h3>
+          <p>
+            Our dedicated team and years of experience make us the most reliable
+            choice.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3>
+            How do I start an app business? <i class="fa fa-chevron-down"></i>
+          </h3>
+          <p>
+            Start by identifying your niche, researching the market, and then
+            building a scalable product with expert guidance.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Start -->
+    <footer class="footer text-light">
+      <div class="container py-5">
+        <div class="row">
+          <!-- Logo & Description -->
+          <div class="col-md-3 mb-4">
+            <h4
+              class="text-uppercase mb-3 d-flex align-items-center"
+              style="color: #ccff00"
+            >
+              <img
+                src="images/logo1.jpg"
+                alt="BizLift Logo"
+                style="height: 30px; margin-right: 10px"
+              />
+              BizLift
+            </h4>
+            <p>
+              Empowering your business with smart solutions & growth strategies.
+            </p>
+            <div class="social-icons mt-3">
+              <a
+                href="https://www.facebook.com/YourPage"
+                target="_blank"
+                class="text-facebook me-3"
+              >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/YourProfile"
+                target="_blank"
+                class="text-instagram me-3"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a
+                href="https://twitter.com/YourProfile"
+                target="_blank"
+                class="text-twitter"
+              >
+                <i class="fab fa-twitter"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Useful Links -->
+          <div class="col-md-3 mb-4">
+            <h5 class="mb-3">Useful Links</h5>
+            <ul class="list-unstyled">
+              <li><a href="index.html">> Home</a></li>
+              <li><a href="about.html">> About</a></li>
+              <li><a href="service_details.html">> Services</a></li>
+              <li><a href="page.html">> Page</a></li>
+              <li><a href="blog_grid.html">> Blog</a></li>
+              <li><a href="contact.html">> Contact</a></li>
             </ul>
           </div>
-        </div>
-      </div>
-    </section>
 
-    <section class="section-padding">
-      <h3>Deliverables</h3>
-      <div class="row mt-3">
-        <div class="col-md-4 mb-3">
-          <div class="p-4 border rounded text-center">
-            <i class="fa-solid fa-lightbulb fa-2x mb-2"></i>
-            <h5>Business Strategy</h5>
-            <p>Roadmaps, KPI framework, market entry plan.</p>
+          <!-- Contact Info -->
+          <div class="col-md-3 mb-4">
+            <h5 class="mb-3">Contact</h5>
+            <p>
+              <i class="fas fa-phone-alt me-2 icon-yellowgreen"></i>(+888) 123
+              456 765
+            </p>
+            <p>
+              <i class="fas fa-envelope me-2 icon-yellowgreen"></i
+              >support@bizlift.com
+            </p>
+            <p>
+              <i class="fas fa-map-marker-alt me-2 icon-yellowgreen"></i>Pune,
+              Maharashtra, India
+            </p>
+          </div>
+
+          <!-- Newsletter -->
+          <div class="col-md-3 mb-4">
+            <h5 class="mb-3">Newsletter</h5>
+            <p>Subscribe to our newsletter to get the latest updates & news.</p>
+            <form class="d-flex">
+              <input
+                type="email"
+                class="form-control me-2"
+                placeholder="Email Address"
+                required
+              />
+              <button type="submit" class="btn btn-yellowgreen">
+                <i class="fas fa-paper-plane"></i>
+              </button>
+            </form>
           </div>
         </div>
-        <div class="col-md-4 mb-3">
-          <div class="p-4 border rounded text-center">
-            <i class="fa-solid fa-laptop-code fa-2x mb-2"></i>
-            <h5>Automation</h5>
-            <p>ERP integration, dashboards, process automation.</p>
-          </div>
-        </div>
-        <div class="col-md-4 mb-3">
-          <div class="p-4 border rounded text-center">
-            <i class="fa-solid fa-people-group fa-2x mb-2"></i>
-            <h5>Training</h5>
-            <p>Team upskilling, SOPs, workshops.</p>
-          </div>
-        </div>
       </div>
-    </section>
+    </footer>
 
-    <section class="section-padding text-center">
-      <h3>Results & Metrics</h3>
-      <div class="row mt-3">
-        <div class="col-md-3 mb-3">
-          <h2 class="fw-bold">+45%</h2>
-          <p>Revenue</p>
-        </div>
-        <div class="col-md-3 mb-3">
-          <h2 class="fw-bold">+30%</h2>
-          <p>Efficiency</p>
-        </div>
-        <div class="col-md-3 mb-3">
-          <h2 class="fw-bold">+50%</h2>
-          <p>Retention</p>
-        </div>
-        <div class="col-md-3 mb-3">
-          <h2 class="fw-bold">-25%</h2>
-          <p>Costs</p>
-        </div>
-      </div>
-    </section>
+    <!-- Footer End -->
+    <!-- FAQ SCRIPT -->
+    <script>
+      document.querySelectorAll(".faq-item").forEach((item) => {
+        item.addEventListener("click", () => {
+          item.classList.toggle("active");
+        });
+      });
+    </script>
 
-    <section class="section-padding bg-dark text-center">
-      <blockquote class="blockquote">
-        “BizLift helped us scale with a clear plan and measurable results.”
-      </blockquote>
-      <footer class="blockquote-footer text-white">CEO, ABC Enterprises</footer>
-    </section>
-
-    <section class="section-padding text-center">
-      <a href="contact.html" class="btn btn-lg btn-success">Contact Us</a>
-    </section>
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="text-center bg-dark">
-    <p class="text-white">
-      © 2025 <span class="text-bizlift">BizLift</span> | All Rights Reserved.
-    </p>
-    <div>
-      <a href="https://www.facebook.com/" class="text-white me-3"><i class="bi bi-facebook text-primary fs-3"></i></a>
-      <a href="https://www.instagram.com/" class="text-white me-3"><i class="bi bi-instagram text-insta fs-3"></i></a>
-      <a href="https://twitter.com/" class="text-white"><i class="bi bi-twitter text-primary fs-3"></i></a>
-    </div>
-  </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
